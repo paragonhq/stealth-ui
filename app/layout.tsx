@@ -5,7 +5,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Stealth UI",
-  description: "Finished React components for product interfaces.",
+  description: "Components that feel alive.",
 };
 
 // Read the saved theme before paint so there is no flash.

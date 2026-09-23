@@ -1,10 +1,10 @@
-<a href="https://www.stealth.pm/ui"><img src=".github/og.png" alt="Stealth UI — finished React components for product interfaces" width="100%" /></a>
+<a href="https://www.stealth.pm/ui"><img src=".github/og.png" alt="Stealth UI — components that feel alive" width="100%" /></a>
 
 # Stealth UI
 
-321 React components for product interfaces, each one finished: every state, the keyboard, the screen reader, touch, both themes, reduced motion, and the small motion that tells you something happened.
+**Components that feel alive.** Stealth UI is a micro-interaction-rich component library: rich motion on every interaction, built production-ready with full keyboard, screen reader, and reduced-motion support.
 
-Not a package. You copy the source into your project and it becomes yours. Start a new app with all of it, add one component to an app you have, or copy a file by hand.
+321 components, and not a package: you copy the source into your project and it becomes yours. Start a new app with all of it, add one component to an app you have, or copy a file by hand.
 
 ```bash
 npx create-next-app@latest my-app -e https://github.com/paragonhq/stealth-ui

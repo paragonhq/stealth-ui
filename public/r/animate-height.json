@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "animate-height",
+  "type": "registry:ui",
+  "title": "Animate Height",
+  "description": "Follows its content’s height on a spring, measured, interruptible, auto at rest.",
+  "categories": [
+    "motion"
+  ],
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [
+    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/tokens.json",
+    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/cn.json"
+  ],
+  "files": [
+    {
+      "path": "components/ui/animate-height.tsx",
+      "content": "\"use client\";\nimport { animate, motionValue, useReducedMotion, type AnimationPlaybackControlsWithThen, type Transition } from \"motion/react\";\nimport { useEffect, useImperativeHandle, useRef } from \"react\";\nimport { cn } from \"@/lib/cn\";\n\nexport type AnimateHeightProps = Omit<React.ComponentProps<\"div\">, \"style\"> & {\n  style?: Omit<React.CSSProperties, \"height\">;\n  /** Replace the default spring. Durations otherwise scale with the distance travelled. */\n  transition?: Transition;\n  /** Apply changes without animating while true, e.g. for keyboard-driven or bulk updates. */\n  instant?: boolean;\n  /** Classes for the inner, measured element. */\n  contentClassName?: string;\n  /** Called with the content's new height in px each time it changes. */\n  onHeightChange?: (height: number) => void;\n};\n\n// Short moves stay quick, long ones get a little more time, never past 350ms.\nconst springFor = (distance: number): Transition => ({\n  type: \"spring\",\n  bounce: 0,\n  visualDuration: 0.18 + (Math.min(distance, 400) / 400) * 0.17,\n});\n\nexport function AnimateHeight({\n  transition,\n  instant = false,\n  contentClassName,\n  onHeightChange,\n  className,\n  style,\n  children,\n  ref,\n  ...rest\n}: AnimateHeightProps) {\n  const reduce = useReducedMotion();\n  const outerRef = useRef<HTMLDivElement>(null);\n  const innerRef = useRef<HTMLDivElement>(null);\n  const options = useRef({ transition, skip: false, onHeightChange });\n  // The outer box is also the caller's ref; the observer needs its own handle on it.\n  useImperativeHandle(ref, () => outerRef.current as HTMLDivElement, []);\n\n  useEffect(() => {\n    options.current = { transition, skip: instant || !!reduce, onHeightChange };\n  });\n\n  useEffect(() => {\n    const outer = outerRef.current;\n    const inner = innerRef.current;\n    if (!outer || !inner) return;\n    // Height is \"auto\" at rest, so the box follows its content with no JavaScript in\n    // the loop. It becomes a number only while a change is animating.\n    const height = motionValue(0);\n    const unsubscribe = height.on(\"change\", (v) => {\n      if (outer.dataset.animating !== undefined) outer.style.height = `${v}px`;\n    });\n    let last: number | null = null;\n    let hidden = false;\n    let controls: AnimationPlaybackControlsWithThen | undefined;\n\n    const settle = () => {\n      delete outer.dataset.animating;\n      outer.style.height = \"\";\n    };\n\n    const observer = new ResizeObserver(([entry]) => {\n      const next = entry.borderBoxSize?.[0]?.blockSize ?? inner.offsetHeight;\n      const visible = outer.getClientRects().length > 0;\n      const prev = last;\n      const wasHidden = hidden;\n      last = next;\n      hidden = !visible;\n      if (prev === null || prev === next) return;\n      options.current.onHeightChange?.(next);\n      // First measure, a hidden box, or a box that is just being shown: no animation.\n      if (!visible || wasHidden || options.current.skip) {\n        controls?.stop();\n        settle();\n        return;\n      }\n      const from = outer.dataset.animating !== undefined ? height.get() : prev;\n      // Hold the old height before this frame paints (the observer runs after layout,\n      // before paint), then animate. Retargeting mid-flight keeps the spring's velocity.\n      if (outer.dataset.animating === undefined) height.jump(from);\n      outer.dataset.animating = \"\";\n      outer.style.height = `${from}px`;\n      controls = animate(height, next, options.current.transition ?? springFor(Math.abs(next - from)));\n      const mine = controls;\n      mine.then(() => {\n        if (controls === mine) settle();\n      });\n    });\n\n    observer.observe(inner);\n    return () => {\n      observer.disconnect();\n      controls?.stop();\n      unsubscribe();\n    };\n  }, []);\n\n  return (\n    <div\n      ref={outerRef}\n      className={cn(\n        // Content-box, so padding and borders on this element sit outside the animated height.\n        // Clipped on the vertical axis only, and only while moving: side-to-side overflow\n        // (focus rings, shadows, a sideways slide) is never cut.\n        \"box-content data-[animating]:overflow-y-clip\",\n        className,\n      )}\n      style={style}\n      {...rest}\n    >\n      <div ref={innerRef} className={cn(\"flow-root\", contentClassName)}>\n        {children}\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "docs": "https://stealth.pm/ui/animate-height"
+}

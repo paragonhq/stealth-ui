@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "flip-list",
+  "type": "registry:ui",
+  "title": "FLIP List",
+  "description": "Rows glide to their new place on sort and filter; leavers step out first.",
+  "categories": [
+    "motion"
+  ],
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [
+    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/tokens.json",
+    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/cn.json",
+    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/motion.json"
+  ],
+  "files": [
+    {
+      "path": "components/ui/flip-list.tsx",
+      "content": "\"use client\";\nimport { AnimatePresence, motion, useReducedMotion } from \"motion/react\";\nimport { createContext, useContext } from \"react\";\nimport { cn } from \"@/lib/cn\";\nimport { ease, spring } from \"@/lib/motion\";\n\nconst ReduceCtx = createContext(false);\n\ntype MotionConflicts = \"onDrag\" | \"onDragStart\" | \"onDragEnd\" | \"onAnimationStart\" | \"onAnimationEnd\" | \"onAnimationIteration\";\n\nexport type FlipListProps = Omit<React.ComponentProps<\"ul\">, MotionConflicts> & {\n  /** The list element. Children must be FlipItems with stable keys. */\n  as?: \"ul\" | \"ol\" | \"div\";\n  /** Animate the items that are there on first mount too. Off by default: a list that's already there shouldn't perform. */\n  initial?: boolean;\n  /** Called once every removed item has finished leaving. */\n  onExitComplete?: () => void;\n};\n\n/**\n * When the children change order, arrive or leave, every item glides from where\n * it was to where it now is. Leaving items are lifted out of the flow at once,\n * so the rest close the gap while they fade rather than after.\n */\nexport function FlipList({ as: Tag = \"ul\", initial = false, onExitComplete, className, children, ...rest }: FlipListProps) {\n  const reduce = !!useReducedMotion();\n  const Comp = Tag as \"ul\";\n  return (\n    <ReduceCtx.Provider value={reduce}>\n      {/* Popped (leaving) items are positioned against the list, so it has to be a containing block. */}\n      <Comp className={cn(\"relative\", className)} {...rest}>\n        {/* Without movement, a leaving item holds its place while it fades so nothing overlaps; then the rest snap up. */}\n        <AnimatePresence initial={initial} mode={reduce ? \"sync\" : \"popLayout\"} onExitComplete={onExitComplete}>\n          {children}\n        </AnimatePresence>\n      </Comp>\n    </ReduceCtx.Provider>\n  );\n}\n\nexport type FlipItemProps = Omit<React.ComponentProps<\"li\">, MotionConflicts> & {\n  /** Use \"div\" inside a `FlipList as=\"div\"`. */\n  as?: \"li\" | \"div\";\n};\n\nconst move = spring.soft;\n\n/** One item. Its `key` is its identity: keep it stable across sorts and filters. */\nexport function FlipItem({ as = \"li\", className, ref, ...rest }: FlipItemProps) {\n  const reduce = useContext(ReduceCtx);\n  const props = {\n    // \"position\" moves the item without scaling it, so text and borders never stretch mid-flight.\n    layout: reduce ? false : (\"position\" as const),\n    className,\n    initial: reduce ? { opacity: 0 } : { opacity: 0, scale: 0.97 },\n    animate: { opacity: 1, scale: 1 },\n    exit: reduce\n      ? { opacity: 0, transition: { duration: 0.12 } }\n      : { opacity: 0, scale: 0.97, transition: { duration: 0.16, ease: ease.out } },\n    transition: { layout: move, default: { duration: reduce ? 0.15 : 0.24, ease: ease.out } },\n    ...(rest as React.ComponentProps<typeof motion.li>),\n  };\n  return as === \"div\" ? (\n    <motion.div ref={ref as unknown as React.Ref<HTMLDivElement>} {...(props as React.ComponentProps<typeof motion.div>)} />\n  ) : (\n    <motion.li ref={ref} {...props} />\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "docs": "https://stealth.pm/ui/flip-list"
+}

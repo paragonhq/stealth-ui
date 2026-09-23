@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "menubar",
+  "type": "registry:ui",
+  "title": "Menubar",
+  "description": "File, Edit, View menus with one pill that slides between them.",
+  "categories": [
+    "menus"
+  ],
+  "dependencies": [
+    "@base-ui/react",
+    "motion"
+  ],
+  "registryDependencies": [
+    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/tokens.json",
+    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/cn.json",
+    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/motion.json",
+    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/dropdown-menu.json"
+  ],
+  "files": [
+    {
+      "path": "components/ui/menubar.tsx",
+      "content": "\"use client\";\nimport { Menu } from \"@base-ui/react/menu\";\nimport { Menubar as Base } from \"@base-ui/react/menubar\";\nimport { LayoutGroup, motion, useReducedMotion } from \"motion/react\";\nimport { useId } from \"react\";\nimport { cn } from \"@/lib/cn\";\nimport { spring } from \"@/lib/motion\";\nimport { DropdownMenuContent, type DropdownMenuContentProps } from \"@/components/ui/dropdown-menu\";\n\n// Rows, groups, submenus and shortcuts are the dropdown menu's own parts.\nexport {\n  DropdownMenuItem as MenubarItem,\n  DropdownMenuLinkItem as MenubarLinkItem,\n  DropdownMenuCheckboxItem as MenubarCheckboxItem,\n  DropdownMenuRadioGroup as MenubarRadioGroup,\n  DropdownMenuRadioItem as MenubarRadioItem,\n  DropdownMenuGroup as MenubarGroup,\n  DropdownMenuLabel as MenubarLabel,\n  DropdownMenuSeparator as MenubarSeparator,\n  DropdownMenuSub as MenubarSub,\n  DropdownMenuSubTrigger as MenubarSubTrigger,\n  DropdownMenuSubContent as MenubarSubContent,\n  DropdownMenuShortcut as MenubarShortcut,\n} from \"@/components/ui/dropdown-menu\";\n\nexport type MenubarProps = Base.Props;\n\n/**\n * A row of menus. Once one is open, hovering its neighbors opens them instead,\n * and the left and right arrow keys walk the bar.\n */\nexport function Menubar({ className, children, ...rest }: MenubarProps) {\n  const id = useId();\n  return (\n    <Base\n      data-menubar=\"\"\n      className={(state) =>\n        cn(\"group/menubar relative flex items-center gap-0.5\", typeof className === \"function\" ? className(state) : className)\n      }\n      {...rest}\n    >\n      <LayoutGroup id={id}>{children}</LayoutGroup>\n    </Base>\n  );\n}\n\nexport type MenubarMenuProps = Menu.Root.Props;\n\n/** One menu in the bar: a trigger and its content. */\nexport function MenubarMenu(props: MenubarMenuProps) {\n  return <Menu.Root {...props} />;\n}\n\nexport type MenubarTriggerProps = Menu.Trigger.Props;\n\n/**\n * The menu's name in the bar. The open one sits on a pill that slides to the\n * next menu as the pointer or the arrow keys move along the bar.\n */\nexport function MenubarTrigger({ className, children, ...rest }: MenubarTriggerProps) {\n  const reduce = useReducedMotion();\n  return (\n    <Menu.Trigger\n      className={(state) =>\n        cn(\n          \"relative isolate inline-flex h-7 shrink-0 select-none items-center rounded-md px-2.5 text-[13px] text-fg-2 outline-none\",\n          \"transition-colors duration-150 touch-manipulation [-webkit-tap-highlight-color:transparent]\",\n          \"focus-visible:outline-solid focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-fg-3\",\n          // Hover is a one-step wash, but only while nothing is open: once a menu is,\n          // the pill is the only background on the bar.\n          \"group-not-data-has-submenu-open/menubar:hover:bg-hover group-not-data-has-submenu-open/menubar:hover:text-fg\",\n          \"data-popup-open:text-fg data-disabled:pointer-events-none data-disabled:opacity-50\",\n          typeof className === \"function\" ? className(state) : className,\n        )\n      }\n      render={(props, state) => (\n        <button type=\"button\" {...props}>\n          {state.open && (\n            <motion.span\n              aria-hidden\n              layoutId=\"menubar-pill\"\n              transition={reduce ? { duration: 0 } : spring.snappy}\n              className=\"absolute inset-0 -z-10 rounded-md bg-fg/[0.07]\"\n            />\n          )}\n          {props.children}\n        </button>\n      )}\n      {...rest}\n    >\n      {children}\n    </Menu.Trigger>\n  );\n}\n\nexport type MenubarContentProps = DropdownMenuContentProps;\n\n/**\n * The open menu. Its labels start on the same line as the trigger's, and when the\n * bar hands off from one menu to the next the new one appears on the same frame.\n */\nexport function MenubarContent({ sideOffset = 6, alignOffset = -3, ...rest }: MenubarContentProps) {\n  return <DropdownMenuContent side=\"bottom\" align=\"start\" sideOffset={sideOffset} alignOffset={alignOffset} {...rest} />;\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "docs": "https://stealth.pm/ui/menubar"
+}

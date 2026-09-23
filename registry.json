@@ -1,0 +1,4873 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "stealth",
+  "homepage": "https://stealth.pm/ui",
+  "items": [
+    {
+      "name": "cn",
+      "type": "registry:lib",
+      "files": [
+        {
+          "path": "lib/cn.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "icons",
+      "type": "registry:lib",
+      "files": [
+        {
+          "path": "lib/icons.tsx",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "motion",
+      "type": "registry:lib",
+      "files": [
+        {
+          "path": "lib/motion.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "use-controllable-state",
+      "type": "registry:lib",
+      "files": [
+        {
+          "path": "lib/use-controllable-state.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "tokens",
+      "type": "registry:file",
+      "files": [
+        {
+          "path": "styles/stealth.css",
+          "type": "registry:file",
+          "target": "styles/stealth.css"
+        }
+      ]
+    },
+    {
+      "name": "async-button",
+      "type": "registry:ui",
+      "title": "Async Button",
+      "description": "Tracks the promise it starts: busy, tick or retry, without ever changing width.",
+      "categories": [
+        "actions"
+      ],
+      "files": [
+        {
+          "path": "components/ui/async-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "Four variants, three sizes, and a loading state that never changes width.",
+      "categories": [
+        "actions"
+      ],
+      "files": [
+        {
+          "path": "components/ui/button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-group",
+      "type": "registry:ui",
+      "title": "Button Group",
+      "description": "Attached buttons with hairlines between and one hover wash that glides.",
+      "categories": [
+        "actions"
+      ],
+      "files": [
+        {
+          "path": "components/ui/button-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "copy-button",
+      "type": "registry:ui",
+      "title": "Copy Button",
+      "description": "Copies on press, draws a tick, holds its width and reverts on its own.",
+      "categories": [
+        "actions"
+      ],
+      "files": [
+        {
+          "path": "components/ui/copy-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hold-to-confirm",
+      "type": "registry:ui",
+      "title": "Hold to Confirm",
+      "description": "Press and hold to commit; the label flips color under the filling edge.",
+      "categories": [
+        "actions"
+      ],
+      "files": [
+        {
+          "path": "components/ui/hold-to-confirm.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "icon-button",
+      "type": "registry:ui",
+      "title": "Icon Button",
+      "description": "Square button with a required label, warm tooltips and a sprung squash.",
+      "categories": [
+        "actions"
+      ],
+      "files": [
+        {
+          "path": "components/ui/icon-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "like-button",
+      "type": "registry:ui",
+      "title": "Like Button",
+      "description": "Optimistic like with a squash-and-stretch heart, rolling count and honest rollback.",
+      "categories": [
+        "actions"
+      ],
+      "files": [
+        {
+          "path": "components/ui/like-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "speed-dial",
+      "type": "registry:ui",
+      "title": "Speed Dial",
+      "description": "A floating button that fans out labeled actions, nearest first, on a spring.",
+      "categories": [
+        "actions"
+      ],
+      "files": [
+        {
+          "path": "components/ui/speed-dial.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "split-button",
+      "type": "registry:ui",
+      "title": "Split Button",
+      "description": "Main action plus a chevron menu; the choice can become the main action.",
+      "categories": [
+        "actions"
+      ],
+      "files": [
+        {
+          "path": "components/ui/split-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toggle-button",
+      "type": "registry:ui",
+      "title": "Toggle Button",
+      "description": "Stays on with aria-pressed, and its icon morphs: fills, pins, mutes.",
+      "categories": [
+        "actions"
+      ],
+      "files": [
+        {
+          "path": "components/ui/toggle-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toggle-group",
+      "type": "registry:ui",
+      "title": "Toggle Group",
+      "description": "Single or multiple toggles; one wash slides, neighboring washes join.",
+      "categories": [
+        "actions"
+      ],
+      "files": [
+        {
+          "path": "components/ui/toggle-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "two-step-confirm",
+      "type": "registry:ui",
+      "title": "Two-step Confirm",
+      "description": "Asks once in place, springs to fit the question, then quietly takes it back.",
+      "categories": [
+        "actions"
+      ],
+      "files": [
+        {
+          "path": "components/ui/two-step-confirm.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "floating-label",
+      "type": "registry:ui",
+      "title": "Floating Label Field",
+      "description": "Label rests inside as the placeholder and floats up on focus, value or autofill.",
+      "categories": [
+        "inputs"
+      ],
+      "files": [
+        {
+          "path": "components/ui/floating-label.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "inline-edit",
+      "type": "registry:ui",
+      "title": "Inline Edit",
+      "description": "Text that becomes an input in place, saves optimistically, then draws a tick.",
+      "categories": [
+        "inputs"
+      ],
+      "files": [
+        {
+          "path": "components/ui/inline-edit.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "Text field with prefix and suffix slots, a clear that fades in, and Field-aware invalid state.",
+      "categories": [
+        "inputs"
+      ],
+      "files": [
+        {
+          "path": "components/ui/input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "masked-input",
+      "type": "registry:ui",
+      "title": "Masked Input",
+      "description": "Formats cards, phones, dates and money as you type, caret held in place.",
+      "categories": [
+        "inputs"
+      ],
+      "files": [
+        {
+          "path": "components/ui/masked-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "mention-input",
+      "type": "registry:ui",
+      "title": "Mention Input",
+      "description": "A textarea where @ suggests people at the caret and names become tokens.",
+      "categories": [
+        "inputs"
+      ],
+      "files": [
+        {
+          "path": "components/ui/mention-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "number-field",
+      "type": "registry:ui",
+      "title": "Number Field",
+      "description": "Steppers you can hold, a label you can drag, digits that roll into place.",
+      "categories": [
+        "inputs"
+      ],
+      "files": [
+        {
+          "path": "components/ui/number-field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "otp-field",
+      "type": "registry:ui",
+      "title": "OTP Field",
+      "description": "Six cells that take paste and autofill, ripple while checking, clear on failure.",
+      "categories": [
+        "inputs"
+      ],
+      "files": [
+        {
+          "path": "components/ui/otp-field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "password-field",
+      "type": "registry:ui",
+      "title": "Password Field",
+      "description": "Reveals with an eye that slashes itself, keeps the caret, warns on Caps Lock.",
+      "categories": [
+        "inputs"
+      ],
+      "files": [
+        {
+          "path": "components/ui/password-field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "password-strength",
+      "type": "registry:ui",
+      "title": "Password Strength",
+      "description": "Four bars that fill in order, a checklist that ticks, a settled announcement.",
+      "categories": [
+        "inputs"
+      ],
+      "files": [
+        {
+          "path": "components/ui/password-strength.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "search-field",
+      "type": "registry:ui",
+      "title": "Search Field",
+      "description": "Search box whose shortcut hint turns into a clear, with a patient spinner.",
+      "categories": [
+        "inputs"
+      ],
+      "files": [
+        {
+          "path": "components/ui/search-field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tag-input",
+      "type": "registry:ui",
+      "title": "Tag Input",
+      "description": "Chips from Enter, comma or paste; duplicates flash the one already there.",
+      "categories": [
+        "inputs"
+      ],
+      "files": [
+        {
+          "path": "components/ui/tag-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "Textarea",
+      "description": "Grows with its text between row limits, counts near the limit, sends on ⌘↵.",
+      "categories": [
+        "inputs"
+      ],
+      "files": [
+        {
+          "path": "components/ui/textarea.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "Draws its tick, bends it into a dash when mixed, squashes on press.",
+      "categories": [
+        "selection"
+      ],
+      "files": [
+        {
+          "path": "components/ui/checkbox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "checkbox-card",
+      "type": "registry:ui",
+      "title": "Checkbox Card",
+      "description": "Selectable cards whose corner check pops in, with a select-all that counts.",
+      "categories": [
+        "selection"
+      ],
+      "files": [
+        {
+          "path": "components/ui/checkbox-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "checklist",
+      "type": "registry:ui",
+      "title": "Checklist",
+      "description": "Tasks that strike through, then glide into Completed, with a rolling count.",
+      "categories": [
+        "selection"
+      ],
+      "files": [
+        {
+          "path": "components/ui/checklist.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "choice-chips",
+      "type": "registry:ui",
+      "title": "Choice Chips",
+      "description": "Filter chips whose check grows the chip open, with rolling counts and clear.",
+      "categories": [
+        "selection"
+      ],
+      "files": [
+        {
+          "path": "components/ui/choice-chips.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "color-swatches",
+      "type": "registry:ui",
+      "title": "Color Swatches",
+      "description": "Swatch radio group with a ring that grows out and a contrast-aware check.",
+      "categories": [
+        "selection"
+      ],
+      "files": [
+        {
+          "path": "components/ui/color-swatches.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "radio-card",
+      "type": "registry:ui",
+      "title": "Radio Cards",
+      "description": "Plan-style cards where one selection ring slides to whichever you choose.",
+      "categories": [
+        "selection"
+      ],
+      "files": [
+        {
+          "path": "components/ui/radio-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:ui",
+      "title": "Radio Group",
+      "description": "One choice from a few, with a dot that springs in and arrow-key roving.",
+      "categories": [
+        "selection"
+      ],
+      "files": [
+        {
+          "path": "components/ui/radio-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "rating",
+      "type": "registry:ui",
+      "title": "Rating",
+      "description": "Star rating with hover preview, half steps, scrubbing and a pop on commit.",
+      "categories": [
+        "selection"
+      ],
+      "files": [
+        {
+          "path": "components/ui/rating.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "segmented-control",
+      "type": "registry:ui",
+      "title": "Segmented Control",
+      "description": "One pill that springs between segments, with radio semantics and arrow keys.",
+      "categories": [
+        "selection"
+      ],
+      "files": [
+        {
+          "path": "components/ui/segmented-control.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Switch",
+      "description": "Sprung thumb that stretches while held, and waits on async saves in place.",
+      "categories": [
+        "selection"
+      ],
+      "files": [
+        {
+          "path": "components/ui/switch.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "thumbs-feedback",
+      "type": "registry:ui",
+      "title": "Thumbs Feedback",
+      "description": "Helpful or not, with reasons on a thumbs down and a drawn thanks.",
+      "categories": [
+        "selection"
+      ],
+      "files": [
+        {
+          "path": "components/ui/thumbs-feedback.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "detent-slider",
+      "type": "registry:ui",
+      "title": "Detent Slider",
+      "description": "Named stops you can feel: resists near each one, springs into place.",
+      "categories": [
+        "sliders"
+      ],
+      "files": [
+        {
+          "path": "components/ui/detent-slider.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dial",
+      "type": "registry:ui",
+      "title": "Dial",
+      "description": "Rotary knob with drag, wheel and keys, a bipolar arc and rolling readout.",
+      "categories": [
+        "sliders"
+      ],
+      "files": [
+        {
+          "path": "components/ui/dial.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "histogram-range",
+      "type": "registry:ui",
+      "title": "Histogram Range",
+      "description": "Price filter whose bars light up exactly between the thumbs as they move.",
+      "categories": [
+        "sliders"
+      ],
+      "files": [
+        {
+          "path": "components/ui/histogram-range.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "media-scrubber",
+      "type": "registry:ui",
+      "title": "Media Scrubber",
+      "description": "Seek bar with chapters, buffered ranges and a time tip that tracks the pointer.",
+      "categories": [
+        "sliders"
+      ],
+      "files": [
+        {
+          "path": "components/ui/media-scrubber.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "range-slider",
+      "type": "registry:ui",
+      "title": "Range Slider",
+      "description": "Two thumbs whose labels merge when close, synced with typed min and max.",
+      "categories": [
+        "sliders"
+      ],
+      "files": [
+        {
+          "path": "components/ui/range-slider.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "title": "Slider",
+      "description": "Thumb swells on grab, value rides above it, pressed track glides.",
+      "categories": [
+        "sliders"
+      ],
+      "files": [
+        {
+          "path": "components/ui/slider.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "volume-control",
+      "type": "registry:ui",
+      "title": "Volume Control",
+      "description": "Speaker waves follow the level; mute remembers, wheel nudges, popover tucks away.",
+      "categories": [
+        "sliders"
+      ],
+      "files": [
+        {
+          "path": "components/ui/volume-control.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "zoom-control",
+      "type": "registry:ui",
+      "title": "Zoom Control",
+      "description": "Minus, rolling percentage and plus, with a type-or-pick menu and pinch zoom.",
+      "categories": [
+        "sliders"
+      ],
+      "files": [
+        {
+          "path": "components/ui/zoom-control.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "async-combobox",
+      "type": "registry:ui",
+      "title": "Async Combobox",
+      "description": "Remote search that debounces, aborts stale requests and never jolts the list.",
+      "categories": [
+        "pickers"
+      ],
+      "files": [
+        {
+          "path": "components/ui/async-combobox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cascader",
+      "type": "registry:ui",
+      "title": "Cascader",
+      "description": "Nested columns that grow in beside each other, with search across every path.",
+      "categories": [
+        "pickers"
+      ],
+      "files": [
+        {
+          "path": "components/ui/cascader.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "color-picker",
+      "type": "registry:ui",
+      "title": "Color Picker",
+      "description": "Drag, type or sample a color; hue survives grays and recents remember.",
+      "categories": [
+        "pickers"
+      ],
+      "files": [
+        {
+          "path": "components/ui/color-picker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "combobox",
+      "type": "registry:ui",
+      "title": "Combobox",
+      "description": "Filters as you type, sets the matched run in bold and creates what’s missing.",
+      "categories": [
+        "pickers"
+      ],
+      "files": [
+        {
+          "path": "components/ui/combobox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "emoji-picker",
+      "type": "registry:ui",
+      "title": "Emoji Picker",
+      "description": "Search-first emoji grid with arrow keys, skin tones and categories that follow the scroll.",
+      "categories": [
+        "pickers"
+      ],
+      "files": [
+        {
+          "path": "components/ui/emoji-picker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "listbox",
+      "type": "registry:ui",
+      "title": "Listbox",
+      "description": "An inline list where the choice slides between rows and picks merge into blocks.",
+      "categories": [
+        "pickers"
+      ],
+      "files": [
+        {
+          "path": "components/ui/listbox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "multi-select",
+      "type": "registry:ui",
+      "title": "Multi Select",
+      "description": "Chips that fit the field with a rolling +N, search, select all and clear.",
+      "categories": [
+        "pickers"
+      ],
+      "files": [
+        {
+          "path": "components/ui/multi-select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "phone-field",
+      "type": "registry:ui",
+      "title": "Phone Field",
+      "description": "Formats as you type for the chosen country, and reads it from pasted numbers.",
+      "categories": [
+        "pickers"
+      ],
+      "files": [
+        {
+          "path": "components/ui/phone-field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "Opens over its trigger with the choice aligned, and the new value slides in from where it was picked.",
+      "categories": [
+        "pickers"
+      ],
+      "files": [
+        {
+          "path": "components/ui/select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "transfer-list",
+      "type": "registry:ui",
+      "title": "Transfer List",
+      "description": "Two filterable lists where checked rows fly across and land highlighted.",
+      "categories": [
+        "pickers"
+      ],
+      "files": [
+        {
+          "path": "components/ui/transfer-list.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "title": "Calendar",
+      "description": "Locale-true month grid that slides the way you travel and sweeps ranges in.",
+      "categories": [
+        "dates"
+      ],
+      "files": [
+        {
+          "path": "components/ui/calendar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "countdown",
+      "type": "registry:ui",
+      "title": "Countdown",
+      "description": "Rolling-digit countdown that sleeps off screen and lands in an ended state.",
+      "categories": [
+        "dates"
+      ],
+      "files": [
+        {
+          "path": "components/ui/countdown.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "date-field",
+      "type": "registry:ui",
+      "title": "Date Field",
+      "description": "Typed date in the locale's order, with stepping digits and plain-word errors.",
+      "categories": [
+        "dates"
+      ],
+      "files": [
+        {
+          "path": "components/ui/date-field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "date-picker",
+      "type": "registry:ui",
+      "title": "Date Picker",
+      "description": "Type “next fri” or pick from the calendar; it reads back before committing.",
+      "categories": [
+        "dates"
+      ],
+      "files": [
+        {
+          "path": "components/ui/date-picker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "date-range-picker",
+      "type": "registry:ui",
+      "title": "Date Range Picker",
+      "description": "Two months, presets that sweep the range in, and a draft until Apply.",
+      "categories": [
+        "dates"
+      ],
+      "files": [
+        {
+          "path": "components/ui/date-range-picker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "relative-time",
+      "type": "registry:ui",
+      "title": "Relative Time",
+      "description": "“3 minutes ago” that wakes only when its words change, digits rolling.",
+      "categories": [
+        "dates"
+      ],
+      "files": [
+        {
+          "path": "components/ui/relative-time.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "time-picker",
+      "type": "registry:ui",
+      "title": "Time Picker",
+      "description": "Segmented time field in the locale's order, with rolling digits and a slot list.",
+      "categories": [
+        "dates"
+      ],
+      "files": [
+        {
+          "path": "components/ui/time-picker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "week-strip",
+      "type": "registry:ui",
+      "title": "Week Strip",
+      "description": "Phone-style day selector with a sprung pill, swipeable weeks and event dots.",
+      "categories": [
+        "dates"
+      ],
+      "files": [
+        {
+          "path": "components/ui/week-strip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "agenda",
+      "type": "registry:ui",
+      "title": "Agenda",
+      "description": "Upcoming events by day with a Now line and a Join that counts down.",
+      "categories": [
+        "scheduling"
+      ],
+      "files": [
+        {
+          "path": "components/ui/agenda.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "availability-editor",
+      "type": "registry:ui",
+      "title": "Availability Editor",
+      "description": "Weekly hours with split shifts, copy to other days and overlap checks.",
+      "categories": [
+        "scheduling"
+      ],
+      "files": [
+        {
+          "path": "components/ui/availability-editor.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "booking-slots",
+      "type": "registry:ui",
+      "title": "Booking Slots",
+      "description": "Pick a day, then a time that splits in place to reveal Confirm.",
+      "categories": [
+        "scheduling"
+      ],
+      "files": [
+        {
+          "path": "components/ui/booking-slots.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "event-calendar",
+      "type": "registry:ui",
+      "title": "Event Calendar",
+      "description": "Month view that packs multi-day bars and chips into lanes, overflowing into a day list.",
+      "categories": [
+        "scheduling"
+      ],
+      "files": [
+        {
+          "path": "components/ui/event-calendar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "timezone-select",
+      "type": "registry:ui",
+      "title": "Timezone Select",
+      "description": "Every IANA zone with live local time, searchable by city, name or offset.",
+      "categories": [
+        "scheduling"
+      ],
+      "files": [
+        {
+          "path": "components/ui/timezone-select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "week-grid",
+      "type": "registry:ui",
+      "title": "Week Grid",
+      "description": "Time grid where overlaps sit side by side and you drag to create, move or resize.",
+      "categories": [
+        "scheduling"
+      ],
+      "files": [
+        {
+          "path": "components/ui/week-grid.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "autosave-status",
+      "type": "registry:ui",
+      "title": "Autosave Status",
+      "description": "Saving, saved, offline and failed states in one pill that springs to fit.",
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "components/ui/autosave-status.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "avatar-upload",
+      "type": "registry:ui",
+      "title": "Avatar Upload",
+      "description": "Pick, crop and zoom a photo, then watch a ring close around it.",
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "components/ui/avatar-upload.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "char-limit-ring",
+      "type": "registry:ui",
+      "title": "Character Limit Ring",
+      "description": "A tiny ring that fills as you type, then counts down and over.",
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "components/ui/char-limit-ring.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropzone",
+      "type": "registry:ui",
+      "title": "Dropzone",
+      "description": "Lights up when files cross the window, seals its dashes, names every rejection.",
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "components/ui/dropzone.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "error-summary",
+      "type": "registry:ui",
+      "title": "Error Summary",
+      "description": "Lists every problem on submit, links to each field, and thins out as you fix.",
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "components/ui/error-summary.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "field",
+      "type": "registry:ui",
+      "title": "Field",
+      "description": "Label, control, hint and error that speak up on blur, not on every keystroke.",
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "components/ui/field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "inline-validation",
+      "type": "registry:ui",
+      "title": "Inline Validation",
+      "description": "Async checks that spin, then draw a tick or strike a cross, without flicker.",
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "components/ui/inline-validation.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "multi-step-form",
+      "type": "registry:ui",
+      "title": "Multi-step Form",
+      "description": "Steps slide the way you travel, validate one at a time, and keep every answer.",
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "components/ui/multi-step-form.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "save-bar",
+      "type": "registry:ui",
+      "title": "Save Bar",
+      "description": "Rises when a form is dirty, nudges before you leave, ticks once saved.",
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "components/ui/save-bar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "signature-pad",
+      "type": "registry:ui",
+      "title": "Signature Pad",
+      "description": "Smooth, speed-weighted ink with undo, a typed alternative and trimmed PNG/SVG export.",
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "components/ui/signature-pad.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "upload-list",
+      "type": "registry:ui",
+      "title": "Upload List",
+      "description": "Per-file progress with smoothed speed and time left, retry, and a tick on finish.",
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "components/ui/upload-list.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "empty-state",
+      "type": "registry:ui",
+      "title": "Empty State",
+      "description": "One line, one reason, one action, with an icon that draws itself in.",
+      "categories": [
+        "async"
+      ],
+      "files": [
+        {
+          "path": "components/ui/empty-state.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "error-state",
+      "type": "registry:ui",
+      "title": "Error State",
+      "description": "Says what failed and what to do, retries in place, counts every attempt.",
+      "categories": [
+        "async"
+      ],
+      "files": [
+        {
+          "path": "components/ui/error-state.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "infinite-list",
+      "type": "registry:ui",
+      "title": "Infinite List",
+      "description": "A scrolling feed that prefetches pages under skeletons and recovers from failures.",
+      "categories": [
+        "async"
+      ],
+      "files": [
+        {
+          "path": "components/ui/infinite-list.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "load-more",
+      "type": "registry:ui",
+      "title": "Load More",
+      "description": "Appends the next page with a stagger, moves focus and never jumps.",
+      "categories": [
+        "async"
+      ],
+      "files": [
+        {
+          "path": "components/ui/load-more.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "progress-bar",
+      "type": "registry:ui",
+      "title": "Progress Bar",
+      "description": "Rolling percentage, buffer, stepped segments and a tick that draws on completion.",
+      "categories": [
+        "async"
+      ],
+      "files": [
+        {
+          "path": "components/ui/progress-bar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "progress-ring",
+      "type": "registry:ui",
+      "title": "Progress Ring",
+      "description": "Circular progress with a rolling percentage that closes into a drawn tick.",
+      "categories": [
+        "async"
+      ],
+      "files": [
+        {
+          "path": "components/ui/progress-ring.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pull-to-refresh",
+      "type": "registry:ui",
+      "title": "Pull to Refresh",
+      "description": "Rubber-band pull with a filling ring, a flipping arrow and a sprung return.",
+      "categories": [
+        "async"
+      ],
+      "files": [
+        {
+          "path": "components/ui/pull-to-refresh.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "Skeleton",
+      "description": "Bones sized to your text’s line box, lit by one shared slow sweep.",
+      "categories": [
+        "async"
+      ],
+      "files": [
+        {
+          "path": "components/ui/skeleton.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "skeleton-swap",
+      "type": "registry:ui",
+      "title": "Skeleton Swap",
+      "description": "Skeleton to content with a 4px settle and clearing blur, never a flash.",
+      "categories": [
+        "async"
+      ],
+      "files": [
+        {
+          "path": "components/ui/skeleton-swap.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "spinner",
+      "type": "registry:ui",
+      "title": "Spinner",
+      "description": "Arc, dots and pixel-grid spinners drawn on the icon grid, so they swap for icons.",
+      "categories": [
+        "async"
+      ],
+      "files": [
+        {
+          "path": "components/ui/spinner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "task-steps",
+      "type": "registry:ui",
+      "title": "Task Steps",
+      "description": "Stages of a long job with live timers, drawn checks and a filling rail.",
+      "categories": [
+        "async"
+      ],
+      "files": [
+        {
+          "path": "components/ui/task-steps.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "top-loader",
+      "type": "registry:ui",
+      "title": "Top Loader",
+      "description": "A thin page bar that trickles, finishes fast and fades; skips fast loads.",
+      "categories": [
+        "async"
+      ],
+      "files": [
+        {
+          "path": "components/ui/top-loader.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "announcement-bar",
+      "type": "registry:ui",
+      "title": "Announcement Bar",
+      "description": "Slim top bar that rotates messages, holds while read and can be paused.",
+      "categories": [
+        "notifications"
+      ],
+      "files": [
+        {
+          "path": "components/ui/announcement-bar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "banner",
+      "type": "registry:ui",
+      "title": "Banner",
+      "description": "Region-wide notice that collapses smoothly when dismissed and can remember it.",
+      "categories": [
+        "notifications"
+      ],
+      "files": [
+        {
+          "path": "components/ui/banner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "callout",
+      "type": "registry:ui",
+      "title": "Callout",
+      "description": "Inline note, tip, warning or danger block with details that unfold in place.",
+      "categories": [
+        "notifications"
+      ],
+      "files": [
+        {
+          "path": "components/ui/callout.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "connection-status",
+      "type": "registry:ui",
+      "title": "Connection Status",
+      "description": "Offline, reconnecting and back-online in one pill that morphs between them.",
+      "categories": [
+        "notifications"
+      ],
+      "files": [
+        {
+          "path": "components/ui/connection-status.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cookie-consent",
+      "type": "registry:ui",
+      "title": "Cookie Consent",
+      "description": "Compact consent card with equal choices and categories that unfold in place.",
+      "categories": [
+        "notifications"
+      ],
+      "files": [
+        {
+          "path": "components/ui/cookie-consent.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "count-badge",
+      "type": "registry:ui",
+      "title": "Count Badge",
+      "description": "A count that rolls its digits, pops when it rises and caps at 99+.",
+      "categories": [
+        "notifications"
+      ],
+      "files": [
+        {
+          "path": "components/ui/count-badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dynamic-island",
+      "type": "registry:ui",
+      "title": "Dynamic Island",
+      "description": "A live-activity pill that springs open into controls and morphs between activities.",
+      "categories": [
+        "notifications"
+      ],
+      "files": [
+        {
+          "path": "components/ui/dynamic-island.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "new-items-pill",
+      "type": "registry:ui",
+      "title": "New Items Pill",
+      "description": "Holds new feed items behind a rolling count until the reader asks for them.",
+      "categories": [
+        "notifications"
+      ],
+      "files": [
+        {
+          "path": "components/ui/new-items-pill.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "notification-inbox",
+      "type": "registry:ui",
+      "title": "Notification Inbox",
+      "description": "A bell that rings on arrival and opens a grouped, keyboard-driven inbox with undo.",
+      "categories": [
+        "notifications"
+      ],
+      "files": [
+        {
+          "path": "components/ui/notification-inbox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "promise-toast",
+      "type": "registry:ui",
+      "title": "Promise Toast",
+      "description": "One toast follows async work: spinner, live progress, then a tick drawn in place.",
+      "categories": [
+        "notifications"
+      ],
+      "files": [
+        {
+          "path": "components/ui/promise-toast.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "status-dot",
+      "type": "registry:ui",
+      "title": "Status Dot",
+      "description": "Presence dot whose shape morphs between states, so color is never the only signal.",
+      "categories": [
+        "notifications"
+      ],
+      "files": [
+        {
+          "path": "components/ui/status-dot.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toast",
+      "type": "registry:ui",
+      "title": "Toast",
+      "description": "Stacked toasts that fan out on hover, swipe away and update in place.",
+      "categories": [
+        "notifications"
+      ],
+      "files": [
+        {
+          "path": "components/ui/toast.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "alert-dialog",
+      "type": "registry:ui",
+      "title": "Alert Dialog",
+      "description": "Destructive confirm that holds open while it works and explains failures in place.",
+      "categories": [
+        "dialogs"
+      ],
+      "files": [
+        {
+          "path": "components/ui/alert-dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bottom-sheet",
+      "type": "registry:ui",
+      "title": "Bottom Sheet",
+      "description": "Drag between peek, half and full; the list scrolls only once it's open.",
+      "categories": [
+        "dialogs"
+      ],
+      "files": [
+        {
+          "path": "components/ui/bottom-sheet.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "description": "Rises from .97 on the expo curve, scrolls inside with edge hairlines, nudges when refused.",
+      "categories": [
+        "dialogs"
+      ],
+      "files": [
+        {
+          "path": "components/ui/dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hover-card",
+      "type": "registry:ui",
+      "title": "Hover Card",
+      "description": "Profile and link previews that prefetch on intent and draw the wait.",
+      "categories": [
+        "dialogs"
+      ],
+      "files": [
+        {
+          "path": "components/ui/hover-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "morph-dialog",
+      "type": "registry:ui",
+      "title": "Morph Dialog",
+      "description": "A card that opens into its dialog and folds back into the grid.",
+      "categories": [
+        "dialogs"
+      ],
+      "files": [
+        {
+          "path": "components/ui/morph-dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "morph-popover",
+      "type": "registry:ui",
+      "title": "Morph Popover",
+      "description": "A button that grows into its own form and folds back into a tick.",
+      "categories": [
+        "dialogs"
+      ],
+      "files": [
+        {
+          "path": "components/ui/morph-popover.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "description": "Grows out of its trigger along a seamless arrow, flips at edges, opens on hover.",
+      "categories": [
+        "dialogs"
+      ],
+      "files": [
+        {
+          "path": "components/ui/popover.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sheet",
+      "type": "registry:ui",
+      "title": "Sheet",
+      "description": "Side panel on the drawer curve that swipes away and resizes with give.",
+      "categories": [
+        "dialogs"
+      ],
+      "files": [
+        {
+          "path": "components/ui/sheet.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stacked-dialog",
+      "type": "registry:ui",
+      "title": "Stacked Dialog",
+      "description": "Each dialog opened from another pushes it back, dimmed, with a way back.",
+      "categories": [
+        "dialogs"
+      ],
+      "files": [
+        {
+          "path": "components/ui/stacked-dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "action-sheet",
+      "type": "registry:ui",
+      "title": "Action Sheet",
+      "description": "Rises from the bottom, swipes away, and holds for slow actions.",
+      "categories": [
+        "menus"
+      ],
+      "files": [
+        {
+          "path": "components/ui/action-sheet.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "context-menu",
+      "type": "registry:ui",
+      "title": "Context Menu",
+      "description": "Opens at the pointer on right-click, long-press or Shift+F10.",
+      "categories": [
+        "menus"
+      ],
+      "files": [
+        {
+          "path": "components/ui/context-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:ui",
+      "title": "Dropdown Menu",
+      "description": "Grows from its trigger, with one highlight that glides after the pointer.",
+      "categories": [
+        "menus"
+      ],
+      "files": [
+        {
+          "path": "components/ui/dropdown-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "menubar",
+      "type": "registry:ui",
+      "title": "Menubar",
+      "description": "File, Edit, View menus with one pill that slides between them.",
+      "categories": [
+        "menus"
+      ],
+      "files": [
+        {
+          "path": "components/ui/menubar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "overflow-menu",
+      "type": "registry:ui",
+      "title": "Overflow Menu",
+      "description": "Folds the least important controls into More as it narrows, by priority.",
+      "categories": [
+        "menus"
+      ],
+      "files": [
+        {
+          "path": "components/ui/overflow-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "popconfirm",
+      "type": "registry:ui",
+      "title": "Popconfirm",
+      "description": "Asks where you pressed, starts on Cancel, and waits out async confirms.",
+      "categories": [
+        "menus"
+      ],
+      "files": [
+        {
+          "path": "components/ui/popconfirm.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "row-actions",
+      "type": "registry:ui",
+      "title": "Row Actions",
+      "description": "Quick actions slide in over the row's meta, the rest wait in a menu.",
+      "categories": [
+        "menus"
+      ],
+      "files": [
+        {
+          "path": "components/ui/row-actions.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "selection-toolbar",
+      "type": "registry:ui",
+      "title": "Selection Toolbar",
+      "description": "Rises over selected text, glides as it changes, and morphs into a link field.",
+      "categories": [
+        "menus"
+      ],
+      "files": [
+        {
+          "path": "components/ui/selection-toolbar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "description": "Waits once, then answers neighbors instantly, or glides one tooltip along a toolbar.",
+      "categories": [
+        "menus"
+      ],
+      "files": [
+        {
+          "path": "components/ui/tooltip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "active-filters",
+      "type": "registry:ui",
+      "title": "Active Filters",
+      "description": "Applied filters as removable chips that close ranks, fold to +N and undo.",
+      "categories": [
+        "command"
+      ],
+      "files": [
+        {
+          "path": "components/ui/active-filters.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "command-pages",
+      "type": "registry:ui",
+      "title": "Command Pages",
+      "description": "Palette pages that slide in, land on the current choice and remember the way back.",
+      "categories": [
+        "command"
+      ],
+      "files": [
+        {
+          "path": "components/ui/command-pages.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "command-palette",
+      "type": "registry:ui",
+      "title": "Command Palette",
+      "description": "⌘K opens it on the same frame, ranks matches and runs async commands in place.",
+      "categories": [
+        "command"
+      ],
+      "files": [
+        {
+          "path": "components/ui/command-palette.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "faceted-filter",
+      "type": "registry:ui",
+      "title": "Faceted Filter",
+      "description": "A filter button whose searchable popover ticks values, counts roll, chips collapse to +N.",
+      "categories": [
+        "command"
+      ],
+      "files": [
+        {
+          "path": "components/ui/faceted-filter.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "filter-builder",
+      "type": "registry:ui",
+      "title": "Filter Builder",
+      "description": "Filters written as sentences, each word a dropdown, with an all-or-any switch.",
+      "categories": [
+        "command"
+      ],
+      "files": [
+        {
+          "path": "components/ui/filter-builder.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "highlight-match",
+      "type": "registry:ui",
+      "title": "Highlight Match",
+      "description": "Marks what matched in search results, accent-blind, with fuzzy mode and snippets.",
+      "categories": [
+        "command"
+      ],
+      "files": [
+        {
+          "path": "components/ui/highlight-match.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "kbd",
+      "type": "registry:ui",
+      "title": "Kbd",
+      "description": "Keys written for the reader's platform that press down with the real ones.",
+      "categories": [
+        "command"
+      ],
+      "files": [
+        {
+          "path": "components/ui/kbd.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "scoped-search",
+      "type": "registry:ui",
+      "title": "Scoped Search",
+      "description": "A search field where from: and in: become tokens with value suggestions.",
+      "categories": [
+        "command"
+      ],
+      "files": [
+        {
+          "path": "components/ui/scoped-search.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "search-dialog",
+      "type": "registry:ui",
+      "title": "Search Dialog",
+      "description": "Async search with filter counts that roll, a live preview and stale-safe loading.",
+      "categories": [
+        "command"
+      ],
+      "files": [
+        {
+          "path": "components/ui/search-dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "shortcuts-sheet",
+      "type": "registry:ui",
+      "title": "Shortcuts Sheet",
+      "description": "Press ? for every shortcut; press any shortcut and its row lights up.",
+      "categories": [
+        "command"
+      ],
+      "files": [
+        {
+          "path": "components/ui/shortcuts-sheet.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "animated-link",
+      "type": "registry:ui",
+      "title": "Animated Link",
+      "description": "Inline link whose underline draws in, retracts ahead and rewinds when interrupted.",
+      "categories": [
+        "navigation"
+      ],
+      "files": [
+        {
+          "path": "components/ui/animated-link.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumbs",
+      "type": "registry:ui",
+      "title": "Breadcrumbs",
+      "description": "A trail that folds its middle into a menu to fit its width.",
+      "categories": [
+        "navigation"
+      ],
+      "files": [
+        {
+          "path": "components/ui/breadcrumbs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "page-dots",
+      "type": "registry:ui",
+      "title": "Page Dots",
+      "description": "Carousel dots whose active pill stretches, fills with autoplay time and scrolls when long.",
+      "categories": [
+        "navigation"
+      ],
+      "files": [
+        {
+          "path": "components/ui/page-dots.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pagination",
+      "type": "registry:ui",
+      "title": "Pagination",
+      "description": "Numbered pages with a sliding pill, a rolling range and a steady width.",
+      "categories": [
+        "navigation"
+      ],
+      "files": [
+        {
+          "path": "components/ui/pagination.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stepper",
+      "type": "registry:ui",
+      "title": "Stepper",
+      "description": "Wizard steps whose numbers draw into ticks as the rail fills.",
+      "categories": [
+        "navigation"
+      ],
+      "files": [
+        {
+          "path": "components/ui/stepper.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sub-nav",
+      "type": "registry:ui",
+      "title": "Sub Nav",
+      "description": "Scrolling link strip with a gliding hover pill, edge fades and arrows.",
+      "categories": [
+        "navigation"
+      ],
+      "files": [
+        {
+          "path": "components/ui/sub-nav.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "Sliding underline or pill, panels that crossfade and glide to height.",
+      "categories": [
+        "navigation"
+      ],
+      "files": [
+        {
+          "path": "components/ui/tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toc",
+      "type": "registry:ui",
+      "title": "Table of Contents",
+      "description": "Scroll-spy contents whose rail steps with nesting and fills as you read.",
+      "categories": [
+        "navigation"
+      ],
+      "files": [
+        {
+          "path": "components/ui/toc.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tree-view",
+      "type": "registry:ui",
+      "title": "Tree View",
+      "description": "A file tree that opens by height, lights its branch and types ahead.",
+      "categories": [
+        "navigation"
+      ],
+      "files": [
+        {
+          "path": "components/ui/tree-view.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "vertical-tabs",
+      "type": "registry:ui",
+      "title": "Vertical Tabs",
+      "description": "Settings-style side list with a gliding highlight that folds into a select.",
+      "categories": [
+        "navigation"
+      ],
+      "files": [
+        {
+          "path": "components/ui/vertical-tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "icon-rail",
+      "type": "registry:ui",
+      "title": "Icon Rail",
+      "description": "Sidebar that folds to icons in place, with tooltips only when narrow.",
+      "categories": [
+        "app-nav"
+      ],
+      "files": [
+        {
+          "path": "components/ui/icon-rail.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "mega-menu",
+      "type": "registry:ui",
+      "title": "Mega Menu",
+      "description": "Site menu with one panel that morphs between triggers and slides content.",
+      "categories": [
+        "app-nav"
+      ],
+      "files": [
+        {
+          "path": "components/ui/mega-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "mobile-menu",
+      "type": "registry:ui",
+      "title": "Mobile Menu",
+      "description": "Phone menu whose burger turns into the close, with sections that drill in.",
+      "categories": [
+        "app-nav"
+      ],
+      "files": [
+        {
+          "path": "components/ui/mobile-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "navbar",
+      "type": "registry:ui",
+      "title": "Navbar",
+      "description": "Top bar that compacts on scroll while a pill follows the pointer home.",
+      "categories": [
+        "app-nav"
+      ],
+      "files": [
+        {
+          "path": "components/ui/navbar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "path-switcher",
+      "type": "registry:ui",
+      "title": "Path Switcher",
+      "description": "Team / project breadcrumb where every step is a searchable switcher that eases.",
+      "categories": [
+        "app-nav"
+      ],
+      "files": [
+        {
+          "path": "components/ui/path-switcher.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "resizable-panels",
+      "type": "registry:ui",
+      "title": "Resizable Panels",
+      "description": "Split panes that drag, resist at their limits and spring shut on double-click.",
+      "categories": [
+        "app-nav"
+      ],
+      "files": [
+        {
+          "path": "components/ui/resizable-panels.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sidebar",
+      "type": "registry:ui",
+      "title": "Sidebar",
+      "description": "App sidebar whose active pill springs between rows and whose counts roll.",
+      "categories": [
+        "app-nav"
+      ],
+      "files": [
+        {
+          "path": "components/ui/sidebar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tab-bar",
+      "type": "registry:ui",
+      "title": "Tab Bar",
+      "description": "Phone bottom navigation whose icons fill when active, with rolling badge counts.",
+      "categories": [
+        "app-nav"
+      ],
+      "files": [
+        {
+          "path": "components/ui/tab-bar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "user-menu",
+      "type": "registry:ui",
+      "title": "User Menu",
+      "description": "Avatar menu with presence, a sliding theme control and a sign-out that waits.",
+      "categories": [
+        "app-nav"
+      ],
+      "files": [
+        {
+          "path": "components/ui/user-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "workspace-switcher",
+      "type": "registry:ui",
+      "title": "Workspace Switcher",
+      "description": "Searchable workspace menu with number shortcuts, pending switches and a rolling trigger.",
+      "categories": [
+        "app-nav"
+      ],
+      "files": [
+        {
+          "path": "components/ui/workspace-switcher.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "accordion",
+      "type": "registry:ui",
+      "title": "Accordion",
+      "description": "Stacked sections that grow to fit, with answers find-in-page can still reach.",
+      "categories": [
+        "disclosure"
+      ],
+      "files": [
+        {
+          "path": "components/ui/accordion.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "collapsible",
+      "type": "registry:ui",
+      "title": "Collapsible",
+      "description": "One section that folds away, plus a Show 3 more list that cascades in.",
+      "categories": [
+        "disclosure"
+      ],
+      "files": [
+        {
+          "path": "components/ui/collapsible.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "expandable-card",
+      "type": "registry:ui",
+      "title": "Expandable Card",
+      "description": "Cards that open in place to show details while the others make room.",
+      "categories": [
+        "disclosure"
+      ],
+      "files": [
+        {
+          "path": "components/ui/expandable-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "interactive-card",
+      "type": "registry:ui",
+      "title": "Interactive Card",
+      "description": "The whole card is one link, while buttons inside still get their own clicks.",
+      "categories": [
+        "disclosure"
+      ],
+      "files": [
+        {
+          "path": "components/ui/interactive-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "scroll-area",
+      "type": "registry:ui",
+      "title": "Scroll Area",
+      "description": "Native scrolling with thin overlay bars and edges that fade in as you scroll.",
+      "categories": [
+        "disclosure"
+      ],
+      "files": [
+        {
+          "path": "components/ui/scroll-area.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "show-more",
+      "type": "registry:ui",
+      "title": "Show More",
+      "description": "Clamps long text with a fading last line, offering more only when it overflows.",
+      "categories": [
+        "disclosure"
+      ],
+      "files": [
+        {
+          "path": "components/ui/show-more.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "back-to-top",
+      "type": "registry:ui",
+      "title": "Back to Top",
+      "description": "Arrives after a screen, rings with progress, and hands focus back at the top.",
+      "categories": [
+        "scroll"
+      ],
+      "files": [
+        {
+          "path": "components/ui/back-to-top.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hide-on-scroll",
+      "type": "registry:ui",
+      "title": "Hide on Scroll",
+      "description": "Steps aside while you read down, returns on a deliberate scroll up.",
+      "categories": [
+        "scroll"
+      ],
+      "files": [
+        {
+          "path": "components/ui/hide-on-scroll.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "overflow-scroller",
+      "type": "registry:ui",
+      "title": "Overflow Scroller",
+      "description": "A horizontal row whose edge fades and arrows appear only where content hides.",
+      "categories": [
+        "scroll"
+      ],
+      "files": [
+        {
+          "path": "components/ui/overflow-scroller.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "reading-progress",
+      "type": "registry:ui",
+      "title": "Reading Progress",
+      "description": "Tracks the article, not the page, and counts the minutes down.",
+      "categories": [
+        "scroll"
+      ],
+      "files": [
+        {
+          "path": "components/ui/reading-progress.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "scroll-reveal",
+      "type": "registry:ui",
+      "title": "Scroll Reveal",
+      "description": "Reveals children once as they scroll in, with a capped stagger that never replays.",
+      "categories": [
+        "scroll"
+      ],
+      "files": [
+        {
+          "path": "components/ui/scroll-reveal.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "scroll-shadow",
+      "type": "registry:ui",
+      "title": "Scroll Shadow",
+      "description": "Shades only the edges with more to scroll, tied to the scroll itself.",
+      "categories": [
+        "scroll"
+      ],
+      "files": [
+        {
+          "path": "components/ui/scroll-shadow.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "snap-carousel",
+      "type": "registry:ui",
+      "title": "Snap Carousel",
+      "description": "Native scroll-snap carousel with sprung paging, mouse drag and dots that follow the scroll.",
+      "categories": [
+        "scroll"
+      ],
+      "files": [
+        {
+          "path": "components/ui/snap-carousel.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stacking-cards",
+      "type": "registry:ui",
+      "title": "Stacking Cards",
+      "description": "Cards that stick and stack as you scroll, the ones behind shrinking and dimming.",
+      "categories": [
+        "scroll"
+      ],
+      "files": [
+        {
+          "path": "components/ui/stacking-cards.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sticky-header",
+      "type": "registry:ui",
+      "title": "Sticky Header",
+      "description": "Invisible at rest, gains its edge and blur once content slides beneath.",
+      "categories": [
+        "scroll"
+      ],
+      "files": [
+        {
+          "path": "components/ui/sticky-header.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "virtual-list",
+      "type": "registry:ui",
+      "title": "Virtual List",
+      "description": "A windowed listbox for 10,000 rows with measured heights and sticky group headers.",
+      "categories": [
+        "scroll"
+      ],
+      "files": [
+        {
+          "path": "components/ui/virtual-list.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "column-manager",
+      "type": "registry:ui",
+      "title": "Column Manager",
+      "description": "Show, hide and drag columns into order while the table rearranges live.",
+      "categories": [
+        "tables"
+      ],
+      "files": [
+        {
+          "path": "components/ui/column-manager.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "editable-cells",
+      "type": "registry:ui",
+      "title": "Editable Cells",
+      "description": "Spreadsheet cells that edit in place, validate per cell and flash when saved.",
+      "categories": [
+        "tables"
+      ],
+      "files": [
+        {
+          "path": "components/ui/editable-cells.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "expandable-rows",
+      "type": "registry:ui",
+      "title": "Expandable Rows",
+      "description": "Rows open a detail panel that grows from beneath them and scrolls itself into view.",
+      "categories": [
+        "tables"
+      ],
+      "files": [
+        {
+          "path": "components/ui/expandable-rows.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "filter-grid",
+      "type": "registry:ui",
+      "title": "Filter Grid",
+      "description": "Card grid filtered by chips and search that reflows instead of reshuffling.",
+      "categories": [
+        "tables"
+      ],
+      "files": [
+        {
+          "path": "components/ui/filter-grid.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "key-value-list",
+      "type": "registry:ui",
+      "title": "Key-Value List",
+      "description": "Details-panel pairs with copy, in-place edit and a wash that marks what changed.",
+      "categories": [
+        "tables"
+      ],
+      "files": [
+        {
+          "path": "components/ui/key-value-list.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "row-selection",
+      "type": "registry:ui",
+      "title": "Row Selection",
+      "description": "Shift-click ranges that tick in sequence, and a bulk bar that rises with a rolling count.",
+      "categories": [
+        "tables"
+      ],
+      "files": [
+        {
+          "path": "components/ui/row-selection.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sortable-table",
+      "type": "registry:ui",
+      "title": "Sortable Table",
+      "description": "Headers cycle through both directions and back, rows spring into their new order.",
+      "categories": [
+        "tables"
+      ],
+      "files": [
+        {
+          "path": "components/ui/sortable-table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sticky-columns",
+      "type": "registry:ui",
+      "title": "Sticky Columns",
+      "description": "Pinned columns, header and totals whose edges shade only while something hides beneath.",
+      "categories": [
+        "tables"
+      ],
+      "files": [
+        {
+          "path": "components/ui/sticky-columns.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "table-pagination",
+      "type": "registry:ui",
+      "title": "Table Pagination",
+      "description": "Rows per page, rolling range, jump to page, and rows that crossfade the way you paged.",
+      "categories": [
+        "tables"
+      ],
+      "files": [
+        {
+          "path": "components/ui/table-pagination.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "table-toolbar",
+      "type": "registry:ui",
+      "title": "Table Toolbar",
+      "description": "Search, filter, density, view and export in one arrow-key toolbar that reflows.",
+      "categories": [
+        "tables"
+      ],
+      "files": [
+        {
+          "path": "components/ui/table-toolbar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bar-chart",
+      "type": "registry:ui",
+      "title": "Bar Chart",
+      "description": "Columns or ranked rows that grow in, morph on change and glide a tooltip.",
+      "categories": [
+        "data"
+      ],
+      "files": [
+        {
+          "path": "components/ui/bar-chart.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "contribution-graph",
+      "type": "registry:ui",
+      "title": "Contribution Graph",
+      "description": "A year of daily activity as a keyboard-walkable heatmap with a gliding tooltip.",
+      "categories": [
+        "data"
+      ],
+      "files": [
+        {
+          "path": "components/ui/contribution-graph.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "delta-badge",
+      "type": "registry:ui",
+      "title": "Delta Badge",
+      "description": "Signed change with one arrow that turns, tinted by whether the change is good.",
+      "categories": [
+        "data"
+      ],
+      "files": [
+        {
+          "path": "components/ui/delta-badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "donut-chart",
+      "type": "registry:ui",
+      "title": "Donut Chart",
+      "description": "A gapped ring that sweeps in, lifts a segment and rolls its value.",
+      "categories": [
+        "data"
+      ],
+      "files": [
+        {
+          "path": "components/ui/donut-chart.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "leaderboard",
+      "type": "registry:ui",
+      "title": "Leaderboard",
+      "description": "Ranked rows that spring into place, roll their scores and pin you.",
+      "categories": [
+        "data"
+      ],
+      "files": [
+        {
+          "path": "components/ui/leaderboard.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "line-chart",
+      "type": "registry:ui",
+      "title": "Line Chart",
+      "description": "Multi-series lines with a snapping crosshair, full readout and a toggling legend.",
+      "categories": [
+        "data"
+      ],
+      "files": [
+        {
+          "path": "components/ui/line-chart.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "number-ticker",
+      "type": "registry:ui",
+      "title": "Number Ticker",
+      "description": "Rolls each digit toward its new value in the direction it moved, tinting briefly.",
+      "categories": [
+        "data"
+      ],
+      "files": [
+        {
+          "path": "components/ui/number-ticker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "poll-results",
+      "type": "registry:ui",
+      "title": "Poll Results",
+      "description": "Tap to vote, then bars grow and counts roll up from zero.",
+      "categories": [
+        "data"
+      ],
+      "files": [
+        {
+          "path": "components/ui/poll-results.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sparkline",
+      "type": "registry:ui",
+      "title": "Sparkline",
+      "description": "A tiny trend line that draws in once and scrubs to any point.",
+      "categories": [
+        "data"
+      ],
+      "files": [
+        {
+          "path": "components/ui/sparkline.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stat-tile",
+      "type": "registry:ui",
+      "title": "Stat Tile",
+      "description": "KPI card whose sparkline you scrub to roll the headline to any day.",
+      "categories": [
+        "data"
+      ],
+      "files": [
+        {
+          "path": "components/ui/stat-tile.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "usage-meter",
+      "type": "registry:ui",
+      "title": "Usage Meter",
+      "description": "Quota bar split by category that warns near the limit and shows overage honestly.",
+      "categories": [
+        "data"
+      ],
+      "files": [
+        {
+          "path": "components/ui/usage-meter.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "value-flash",
+      "type": "registry:ui",
+      "title": "Value Flash",
+      "description": "Live value that washes green or red on each tick, throttled below three flashes a second.",
+      "categories": [
+        "data"
+      ],
+      "files": [
+        {
+          "path": "components/ui/value-flash.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Avatar",
+      "description": "Photo that fades in once loaded, initials that never flash, presence that morphs.",
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "components/ui/avatar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "avatar-group",
+      "type": "registry:ui",
+      "title": "Avatar Group",
+      "description": "Overlapping faces with true cutouts that fan apart and open the full list.",
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "components/ui/avatar-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "Status and count labels whose text, width and tone change in place.",
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "components/ui/badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "entity-chip",
+      "type": "registry:ui",
+      "title": "Entity Chip",
+      "description": "Inline mention of a person, repo or issue with a lazy-loading hover card.",
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "components/ui/entity-chip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "heading-anchor",
+      "type": "registry:ui",
+      "title": "Heading Anchor",
+      "description": "A heading whose # link copies the section URL, ticks and marks the section.",
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "components/ui/heading-anchor.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "profile-card",
+      "type": "registry:ui",
+      "title": "Profile Card",
+      "description": "A person with presence, local time and stats, and an optimistic follow that rolls back.",
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "components/ui/profile-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tag",
+      "type": "registry:ui",
+      "title": "Tag",
+      "description": "Removable chips that fold away, close the gap and hand focus on.",
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "components/ui/tag.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "timeline",
+      "type": "registry:ui",
+      "title": "Timeline",
+      "description": "Activity grouped by day on a rail, where new events grow in at the top.",
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "components/ui/timeline.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "audio-player",
+      "type": "registry:ui",
+      "title": "Audio Player",
+      "description": "Compact player whose waveform fills as it plays, with drag-to-seek and speed.",
+      "categories": [
+        "media"
+      ],
+      "files": [
+        {
+          "path": "components/ui/audio-player.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "blur-up-image",
+      "type": "registry:ui",
+      "title": "Blur-up Image",
+      "description": "Holds its space, then brings the full image into focus over a blurred preview.",
+      "categories": [
+        "media"
+      ],
+      "files": [
+        {
+          "path": "components/ui/blur-up-image.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "file-thumbnail",
+      "type": "registry:ui",
+      "title": "File Thumbnail",
+      "description": "File card by type that keeps the extension visible and shows upload progress.",
+      "categories": [
+        "media"
+      ],
+      "files": [
+        {
+          "path": "components/ui/file-thumbnail.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "gallery-grid",
+      "type": "registry:ui",
+      "title": "Gallery Grid",
+      "description": "Masonry photos that blur up, select like a photo app and glide when rearranged.",
+      "categories": [
+        "media"
+      ],
+      "files": [
+        {
+          "path": "components/ui/gallery-grid.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "image-compare",
+      "type": "registry:ui",
+      "title": "Image Compare",
+      "description": "A before-and-after divider that follows a drag and springs to a click.",
+      "categories": [
+        "media"
+      ],
+      "files": [
+        {
+          "path": "components/ui/image-compare.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "image-cropper",
+      "type": "registry:ui",
+      "title": "Image Cropper",
+      "description": "Crop box with handles, aspect presets, zoom and rotate, exported to a Blob.",
+      "categories": [
+        "media"
+      ],
+      "files": [
+        {
+          "path": "components/ui/image-cropper.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "lightbox",
+      "type": "registry:ui",
+      "title": "Lightbox",
+      "description": "Photos lift out of their thumbnails, swipe between, zoom, and land back where they came from.",
+      "categories": [
+        "media"
+      ],
+      "files": [
+        {
+          "path": "components/ui/lightbox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "product-gallery",
+      "type": "registry:ui",
+      "title": "Product Gallery",
+      "description": "Product photos that crossfade on pick, swipe on touch and magnify under the mouse.",
+      "categories": [
+        "media"
+      ],
+      "files": [
+        {
+          "path": "components/ui/product-gallery.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "video-player",
+      "type": "registry:ui",
+      "title": "Video Player",
+      "description": "Custom controls over native video, with chapters, subtitles and a morphing play button.",
+      "categories": [
+        "media"
+      ],
+      "files": [
+        {
+          "path": "components/ui/video-player.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "voice-recorder",
+      "type": "registry:ui",
+      "title": "Voice Recorder",
+      "description": "Records with live input levels, pauses, and plays back before you send.",
+      "categories": [
+        "media"
+      ],
+      "files": [
+        {
+          "path": "components/ui/voice-recorder.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "zoom-pan-image",
+      "type": "registry:ui",
+      "title": "Zoom Pan Image",
+      "description": "Pinch, wheel or double-click to zoom where you point, then throw it around.",
+      "categories": [
+        "media"
+      ],
+      "files": [
+        {
+          "path": "components/ui/zoom-pan-image.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "highlight",
+      "type": "registry:ui",
+      "title": "Highlight",
+      "description": "A marker stroke drawn in reading order, carrying on across line breaks.",
+      "categories": [
+        "content"
+      ],
+      "files": [
+        {
+          "path": "components/ui/highlight.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "link-preview",
+      "type": "registry:ui",
+      "title": "Link Preview",
+      "description": "Unfurled link card and inline hover preview sharing one cached request.",
+      "categories": [
+        "content"
+      ],
+      "files": [
+        {
+          "path": "components/ui/link-preview.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "marquee",
+      "type": "registry:ui",
+      "title": "Marquee",
+      "description": "Seamless infinite row that eases to a stop under the pointer.",
+      "categories": [
+        "content"
+      ],
+      "files": [
+        {
+          "path": "components/ui/marquee.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "prose",
+      "type": "registry:ui",
+      "title": "Prose",
+      "description": "Token-only typography for rendered rich text, with section links and code copy.",
+      "categories": [
+        "content"
+      ],
+      "files": [
+        {
+          "path": "components/ui/prose.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "spoiler",
+      "type": "registry:ui",
+      "title": "Spoiler",
+      "description": "Grain-and-blur cover that dissolves outward from where you press it.",
+      "categories": [
+        "content"
+      ],
+      "files": [
+        {
+          "path": "components/ui/spoiler.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "text-morph",
+      "type": "registry:ui",
+      "title": "Text Morph",
+      "description": "Shared letters slide into their new places while the width springs.",
+      "categories": [
+        "content"
+      ],
+      "files": [
+        {
+          "path": "components/ui/text-morph.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "text-reveal",
+      "type": "registry:ui",
+      "title": "Text Reveal",
+      "description": "Words or wrapped lines lift out of a blur once, text left intact.",
+      "categories": [
+        "content"
+      ],
+      "files": [
+        {
+          "path": "components/ui/text-reveal.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "text-scramble",
+      "type": "registry:ui",
+      "title": "Text Scramble",
+      "description": "Decodes left to right in fixed time, only where characters changed.",
+      "categories": [
+        "content"
+      ],
+      "files": [
+        {
+          "path": "components/ui/text-scramble.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "truncate",
+      "type": "registry:ui",
+      "title": "Truncate",
+      "description": "Cuts text at the end or middle and unfolds it in place when cut.",
+      "categories": [
+        "content"
+      ],
+      "files": [
+        {
+          "path": "components/ui/truncate.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "drag-select",
+      "type": "registry:ui",
+      "title": "Drag Select",
+      "description": "Rubber-band selection that scrolls at the edges and honors Shift and ⌘.",
+      "categories": [
+        "gestures"
+      ],
+      "files": [
+        {
+          "path": "components/ui/drag-select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "drop-target",
+      "type": "registry:ui",
+      "title": "Drop Target",
+      "description": "Targets say what they take, pull the item in and send refusals home.",
+      "categories": [
+        "gestures"
+      ],
+      "files": [
+        {
+          "path": "components/ui/drop-target.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "kanban",
+      "type": "registry:ui",
+      "title": "Kanban",
+      "description": "Cards lean into the drag, land on an insertion line and move by menu too.",
+      "categories": [
+        "gestures"
+      ],
+      "files": [
+        {
+          "path": "components/ui/kanban.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "long-press",
+      "type": "registry:ui",
+      "title": "Long Press",
+      "description": "Press and hold with a filling ring, right click and Shift F10 included.",
+      "categories": [
+        "gestures"
+      ],
+      "files": [
+        {
+          "path": "components/ui/long-press.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pan-zoom-canvas",
+      "type": "registry:ui",
+      "title": "Pan Zoom Canvas",
+      "description": "An infinite dot-grid canvas that pans, pinches and zooms to the cursor.",
+      "categories": [
+        "gestures"
+      ],
+      "files": [
+        {
+          "path": "components/ui/pan-zoom-canvas.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "reorder-list",
+      "type": "registry:ui",
+      "title": "Reorder List",
+      "description": "Lifts on press, springs neighbors aside and reorders from the keyboard too.",
+      "categories": [
+        "gestures"
+      ],
+      "files": [
+        {
+          "path": "components/ui/reorder-list.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "resizable-box",
+      "type": "registry:ui",
+      "title": "Resizable Box",
+      "description": "Eight handles, a live size readout, Shift for ratio, Alt from center.",
+      "categories": [
+        "gestures"
+      ],
+      "files": [
+        {
+          "path": "components/ui/resizable-box.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sortable-grid",
+      "type": "registry:ui",
+      "title": "Sortable Grid",
+      "description": "Tiles lift off the grid, leave a slot behind and land where dropped.",
+      "categories": [
+        "gestures"
+      ],
+      "files": [
+        {
+          "path": "components/ui/sortable-grid.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "swipe-actions",
+      "type": "registry:ui",
+      "title": "Swipe Actions",
+      "description": "Swipe a row to reveal actions; swipe far and the tray fills to commit.",
+      "categories": [
+        "gestures"
+      ],
+      "files": [
+        {
+          "path": "components/ui/swipe-actions.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "swipe-deck",
+      "type": "registry:ui",
+      "title": "Swipe Deck",
+      "description": "A card stack you throw left or right, with undo and matching buttons.",
+      "categories": [
+        "gestures"
+      ],
+      "files": [
+        {
+          "path": "components/ui/swipe-deck.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "activity-feed",
+      "type": "registry:ui",
+      "title": "Activity Feed",
+      "description": "A timeline of who did what, grouped by day, that holds your place as it updates.",
+      "categories": [
+        "collaboration"
+      ],
+      "files": [
+        {
+          "path": "components/ui/activity-feed.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "comment-composer",
+      "type": "registry:ui",
+      "title": "Comment Composer",
+      "description": "Grows on focus, @mentions teammates, sends on ⌘↵ and keeps the draft.",
+      "categories": [
+        "collaboration"
+      ],
+      "files": [
+        {
+          "path": "components/ui/comment-composer.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "comment-thread",
+      "type": "registry:ui",
+      "title": "Comment Thread",
+      "description": "Threaded comments that fold, resolve with a drawn tick and undo deletes.",
+      "categories": [
+        "collaboration"
+      ],
+      "files": [
+        {
+          "path": "components/ui/comment-thread.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "follow-button",
+      "type": "registry:ui",
+      "title": "Follow Button",
+      "description": "Follow becomes Following with a drawn tick, offers Unfollow only when safe.",
+      "categories": [
+        "collaboration"
+      ],
+      "files": [
+        {
+          "path": "components/ui/follow-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "invite-field",
+      "type": "registry:ui",
+      "title": "Invite Field",
+      "description": "Turns typed or pasted addresses into chips, flags bad ones, sends with a role.",
+      "categories": [
+        "collaboration"
+      ],
+      "files": [
+        {
+          "path": "components/ui/invite-field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "live-cursors",
+      "type": "registry:ui",
+      "title": "Live Cursors",
+      "description": "Teammates' pointers glide between network updates; idle names tuck into initials.",
+      "categories": [
+        "collaboration"
+      ],
+      "files": [
+        {
+          "path": "components/ui/live-cursors.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "presence-stack",
+      "type": "registry:ui",
+      "title": "Presence Stack",
+      "description": "Live faces that slide in, ping once, fade out and roll the overflow count.",
+      "categories": [
+        "collaboration"
+      ],
+      "files": [
+        {
+          "path": "components/ui/presence-stack.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "reaction-bar",
+      "type": "registry:ui",
+      "title": "Reaction Bar",
+      "description": "Emoji reactions that pop, roll their counts, say who, and roll back.",
+      "categories": [
+        "collaboration"
+      ],
+      "files": [
+        {
+          "path": "components/ui/reaction-bar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "share-dialog",
+      "type": "registry:ui",
+      "title": "Share Dialog",
+      "description": "Invite by email, manage who has access and set link access in one place.",
+      "categories": [
+        "collaboration"
+      ],
+      "files": [
+        {
+          "path": "components/ui/share-dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "typing-indicator",
+      "type": "registry:ui",
+      "title": "Typing Indicator",
+      "description": "Who is typing, in words and a dot wave, opening its own height.",
+      "categories": [
+        "collaboration"
+      ],
+      "files": [
+        {
+          "path": "components/ui/typing-indicator.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "attachment-tray",
+      "type": "registry:ui",
+      "title": "Attachment Tray",
+      "description": "Pending uploads that develop as they finish, retry in place and reorder.",
+      "categories": [
+        "messaging"
+      ],
+      "files": [
+        {
+          "path": "components/ui/attachment-tray.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chat-thread",
+      "type": "registry:ui",
+      "title": "Chat Thread",
+      "description": "Grouped bubbles with tails, pinned to the latest while new messages rise in.",
+      "categories": [
+        "messaging"
+      ],
+      "files": [
+        {
+          "path": "components/ui/chat-thread.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "conversation-list",
+      "type": "registry:ui",
+      "title": "Conversation List",
+      "description": "Chat inbox where rows spring to the top, counts roll and swipes commit.",
+      "categories": [
+        "messaging"
+      ],
+      "files": [
+        {
+          "path": "components/ui/conversation-list.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "jump-to-latest",
+      "type": "registry:ui",
+      "title": "Jump to Latest",
+      "description": "Follows new messages at the bottom, then counts them when you scroll away.",
+      "categories": [
+        "messaging"
+      ],
+      "files": [
+        {
+          "path": "components/ui/jump-to-latest.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "message-composer",
+      "type": "registry:ui",
+      "title": "Message Composer",
+      "description": "Grows with its text, takes files and emoji, and turns its mic into send.",
+      "categories": [
+        "messaging"
+      ],
+      "files": [
+        {
+          "path": "components/ui/message-composer.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "message-status",
+      "type": "registry:ui",
+      "title": "Message Status",
+      "description": "Delivery ticks that morph from clock to check to read, with a pressable retry.",
+      "categories": [
+        "messaging"
+      ],
+      "files": [
+        {
+          "path": "components/ui/message-status.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "reply-preview",
+      "type": "registry:ui",
+      "title": "Reply Preview",
+      "description": "The quoted message slides up above the composer and jumps back to its original.",
+      "categories": [
+        "messaging"
+      ],
+      "files": [
+        {
+          "path": "components/ui/reply-preview.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "unread-divider",
+      "type": "registry:ui",
+      "title": "Unread Divider",
+      "description": "New-messages line that draws out, counts up and folds away once read.",
+      "categories": [
+        "messaging"
+      ],
+      "files": [
+        {
+          "path": "components/ui/unread-divider.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "voice-message",
+      "type": "registry:ui",
+      "title": "Voice Message",
+      "description": "A voice note whose waveform fills as it plays and seeks where you drag.",
+      "categories": [
+        "messaging"
+      ],
+      "files": [
+        {
+          "path": "components/ui/voice-message.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "branch-switcher",
+      "type": "registry:ui",
+      "title": "Branch Switcher",
+      "description": "Steps between regenerated replies; content slides the way you went, counts roll.",
+      "categories": [
+        "ai-chat"
+      ],
+      "files": [
+        {
+          "path": "components/ui/branch-switcher.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "citations",
+      "type": "registry:ui",
+      "title": "Citations",
+      "description": "Numbered source pills that preview on hover and light their list row.",
+      "categories": [
+        "ai-chat"
+      ],
+      "files": [
+        {
+          "path": "components/ui/citations.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "context-meter",
+      "type": "registry:ui",
+      "title": "Context Meter",
+      "description": "Ring or bar of context used, with a breakdown and a warning before full.",
+      "categories": [
+        "ai-chat"
+      ],
+      "files": [
+        {
+          "path": "components/ui/context-meter.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "message-actions",
+      "type": "registry:ui",
+      "title": "Message Actions",
+      "description": "The row under a reply: copy draws a tick, regenerate turns, thumbs fill.",
+      "categories": [
+        "ai-chat"
+      ],
+      "files": [
+        {
+          "path": "components/ui/message-actions.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "model-picker",
+      "type": "registry:ui",
+      "title": "Model Picker",
+      "description": "Compact model select with capabilities, speed and cost; the name slides and resizes.",
+      "categories": [
+        "ai-chat"
+      ],
+      "files": [
+        {
+          "path": "components/ui/model-picker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "prompt-input",
+      "type": "registry:ui",
+      "title": "Prompt Input",
+      "description": "The AI composer: grows as you write, takes files, and Send becomes Stop.",
+      "categories": [
+        "ai-chat"
+      ],
+      "files": [
+        {
+          "path": "components/ui/prompt-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "reasoning",
+      "type": "registry:ui",
+      "title": "Reasoning",
+      "description": "Thinking shown as one timed line that opens to the stream and folds itself away.",
+      "categories": [
+        "ai-chat"
+      ],
+      "files": [
+        {
+          "path": "components/ui/reasoning.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "shimmer-text",
+      "type": "registry:ui",
+      "title": "Shimmer Text",
+      "description": "A working status whose sheen sweeps the letters and crossfades between steps.",
+      "categories": [
+        "ai-chat"
+      ],
+      "files": [
+        {
+          "path": "components/ui/shimmer-text.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "streaming-text",
+      "type": "registry:ui",
+      "title": "Streaming Text",
+      "description": "A model's reply formatted as it streams, each chunk fading in, never flashing syntax.",
+      "categories": [
+        "ai-chat"
+      ],
+      "files": [
+        {
+          "path": "components/ui/streaming-text.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "suggestions",
+      "type": "registry:ui",
+      "title": "Suggestions",
+      "description": "Prompt starters that stagger in once and fill the composer when picked.",
+      "categories": [
+        "ai-chat"
+      ],
+      "files": [
+        {
+          "path": "components/ui/suggestions.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "agent-plan",
+      "type": "registry:ui",
+      "title": "Agent Plan",
+      "description": "A live checklist the agent rewrites mid-run, with edits that grow in place.",
+      "categories": [
+        "ai-agents"
+      ],
+      "files": [
+        {
+          "path": "components/ui/agent-plan.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "agent-status",
+      "type": "registry:ui",
+      "title": "Agent Status",
+      "description": "A live pill for a background agent that opens into its run and ends on a tick.",
+      "categories": [
+        "ai-agents"
+      ],
+      "files": [
+        {
+          "path": "components/ui/agent-status.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "approval-card",
+      "type": "registry:ui",
+      "title": "Approval Card",
+      "description": "An inline permission request that answers to Enter and Escape, then folds to one line.",
+      "categories": [
+        "ai-agents"
+      ],
+      "files": [
+        {
+          "path": "components/ui/approval-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "diff-review",
+      "type": "registry:ui",
+      "title": "Diff Review",
+      "description": "Accept or reject an agent's edits hunk by hunk; decided hunks fold into a tick.",
+      "categories": [
+        "ai-agents"
+      ],
+      "files": [
+        {
+          "path": "components/ui/diff-review.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "generation-preview",
+      "type": "registry:ui",
+      "title": "Generation Preview",
+      "description": "Generated images resolve from grain to sharp as progress climbs, then become choices.",
+      "categories": [
+        "ai-agents"
+      ],
+      "files": [
+        {
+          "path": "components/ui/generation-preview.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "response-feedback",
+      "type": "registry:ui",
+      "title": "Response Feedback",
+      "description": "Thumbs that nod when pressed; a thumbs down unfolds reasons, a comment and send.",
+      "categories": [
+        "ai-agents"
+      ],
+      "files": [
+        {
+          "path": "components/ui/response-feedback.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "run-log",
+      "type": "registry:ui",
+      "title": "Run Log",
+      "description": "A streaming log grouped by step that follows output until you scroll away.",
+      "categories": [
+        "ai-agents"
+      ],
+      "files": [
+        {
+          "path": "components/ui/run-log.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tool-call",
+      "type": "registry:ui",
+      "title": "Tool Call",
+      "description": "A tool invocation as one quiet row that opens into its JSON, live timer included.",
+      "categories": [
+        "ai-agents"
+      ],
+      "files": [
+        {
+          "path": "components/ui/tool-call.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "voice-input",
+      "type": "registry:ui",
+      "title": "Voice Input",
+      "description": "A mic that grows into a listening pill with live levels and words.",
+      "categories": [
+        "ai-agents"
+      ],
+      "files": [
+        {
+          "path": "components/ui/voice-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "add-to-cart",
+      "type": "registry:ui",
+      "title": "Add to Cart",
+      "description": "A button that morphs into a quantity stepper, with a cart badge that bumps.",
+      "categories": [
+        "commerce"
+      ],
+      "files": [
+        {
+          "path": "components/ui/add-to-cart.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "card-field",
+      "type": "registry:ui",
+      "title": "Card Field",
+      "description": "One card input that formats, detects the network, validates and advances itself.",
+      "categories": [
+        "commerce"
+      ],
+      "files": [
+        {
+          "path": "components/ui/card-field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cart-drawer",
+      "type": "registry:ui",
+      "title": "Cart Drawer",
+      "description": "Slide-over cart whose lines collapse away and whose totals roll as you edit.",
+      "categories": [
+        "commerce"
+      ],
+      "files": [
+        {
+          "path": "components/ui/cart-drawer.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "order-summary",
+      "type": "registry:ui",
+      "title": "Order Summary",
+      "description": "Checkout totals that roll as they change and fold behind the total on phones.",
+      "categories": [
+        "commerce"
+      ],
+      "files": [
+        {
+          "path": "components/ui/order-summary.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "plan-picker",
+      "type": "registry:ui",
+      "title": "Plan Picker",
+      "description": "Plan radio cards that price the change, prorated, before anyone confirms it.",
+      "categories": [
+        "commerce"
+      ],
+      "files": [
+        {
+          "path": "components/ui/plan-picker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "price-toggle",
+      "type": "registry:ui",
+      "title": "Price Toggle",
+      "description": "Monthly or yearly switch whose savings badge swells the moment yearly is chosen.",
+      "categories": [
+        "commerce"
+      ],
+      "files": [
+        {
+          "path": "components/ui/price-toggle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pricing-table",
+      "type": "registry:ui",
+      "title": "Pricing Table",
+      "description": "Plans side by side whose prices roll across the columns when the period changes.",
+      "categories": [
+        "commerce"
+      ],
+      "files": [
+        {
+          "path": "components/ui/pricing-table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "promo-code",
+      "type": "registry:ui",
+      "title": "Promo Code",
+      "description": "A code field that opens in place, checks quietly and lands as a chip.",
+      "categories": [
+        "commerce"
+      ],
+      "files": [
+        {
+          "path": "components/ui/promo-code.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "quantity-stepper",
+      "type": "registry:ui",
+      "title": "Quantity Stepper",
+      "description": "Rolls its digits, turns minus into remove at one and explains stock limits.",
+      "categories": [
+        "commerce"
+      ],
+      "files": [
+        {
+          "path": "components/ui/quantity-stepper.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "seat-picker",
+      "type": "registry:ui",
+      "title": "Seat Picker",
+      "description": "Stepper and slider in sync, with a rolling total and volume tiers that light up.",
+      "categories": [
+        "commerce"
+      ],
+      "files": [
+        {
+          "path": "components/ui/seat-picker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "trial-banner",
+      "type": "registry:ui",
+      "title": "Trial Banner",
+      "description": "Trial countdown with one cell per day that turns urgent in the final days.",
+      "categories": [
+        "commerce"
+      ],
+      "files": [
+        {
+          "path": "components/ui/trial-banner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "upgrade-prompt",
+      "type": "registry:ui",
+      "title": "Upgrade Prompt",
+      "description": "Inline paywall at a limit, with a padlock that lifts as you reach Upgrade.",
+      "categories": [
+        "commerce"
+      ],
+      "files": [
+        {
+          "path": "components/ui/upgrade-prompt.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hotspot",
+      "type": "registry:ui",
+      "title": "Hotspot",
+      "description": "A beacon on a new feature that explains itself and stays dismissed.",
+      "categories": [
+        "onboarding"
+      ],
+      "files": [
+        {
+          "path": "components/ui/hotspot.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "magic-link",
+      "type": "registry:ui",
+      "title": "Magic Link",
+      "description": "Check-your-email screen with inbox shortcuts, a backing-off resend and a folding envelope.",
+      "categories": [
+        "onboarding"
+      ],
+      "files": [
+        {
+          "path": "components/ui/magic-link.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "onboarding-checklist",
+      "type": "registry:ui",
+      "title": "Onboarding Checklist",
+      "description": "A get-started card that ticks, strikes through and opens the next task.",
+      "categories": [
+        "onboarding"
+      ],
+      "files": [
+        {
+          "path": "components/ui/onboarding-checklist.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "passkey-button",
+      "type": "registry:ui",
+      "title": "Passkey Button",
+      "description": "Passkey sign-in whose glyph scans while the device prompt is open, with calm fallbacks.",
+      "categories": [
+        "onboarding"
+      ],
+      "files": [
+        {
+          "path": "components/ui/passkey-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "product-tour",
+      "type": "registry:ui",
+      "title": "Product Tour",
+      "description": "Coach marks whose spotlight travels between targets, with the card gliding alongside.",
+      "categories": [
+        "onboarding"
+      ],
+      "files": [
+        {
+          "path": "components/ui/product-tour.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "session-timeout",
+      "type": "registry:ui",
+      "title": "Session Timeout",
+      "description": "An idle sign-out warning whose countdown rolls down and drains to zero.",
+      "categories": [
+        "onboarding"
+      ],
+      "files": [
+        {
+          "path": "components/ui/session-timeout.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sign-in-flow",
+      "type": "registry:ui",
+      "title": "Sign-in Flow",
+      "description": "Email first, then a password or emailed code, in a card that glides between heights.",
+      "categories": [
+        "onboarding"
+      ],
+      "files": [
+        {
+          "path": "components/ui/sign-in-flow.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "social-buttons",
+      "type": "registry:ui",
+      "title": "Social Buttons",
+      "description": "Provider sign-in buttons with a gliding Last used badge and per-button loading.",
+      "categories": [
+        "onboarding"
+      ],
+      "files": [
+        {
+          "path": "components/ui/social-buttons.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "two-factor-setup",
+      "type": "registry:ui",
+      "title": "Two-factor Setup",
+      "description": "Scan, verify and save recovery codes in one card that glides between steps.",
+      "categories": [
+        "onboarding"
+      ],
+      "files": [
+        {
+          "path": "components/ui/two-factor-setup.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "whats-new",
+      "type": "registry:ui",
+      "title": "What's New",
+      "description": "A changelog popover with a rolling unread count and pages you step through.",
+      "categories": [
+        "onboarding"
+      ],
+      "files": [
+        {
+          "path": "components/ui/whats-new.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "api-key",
+      "type": "registry:ui",
+      "title": "API Key",
+      "description": "Masked secret that scrambles into view, copies, and regenerates behind a confirm.",
+      "categories": [
+        "settings"
+      ],
+      "files": [
+        {
+          "path": "components/ui/api-key.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "locale-select",
+      "type": "registry:ui",
+      "title": "Locale Select",
+      "description": "Searchable language and region picker that previews dates and numbers before you choose.",
+      "categories": [
+        "settings"
+      ],
+      "files": [
+        {
+          "path": "components/ui/locale-select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "member-list",
+      "type": "registry:ui",
+      "title": "Member List",
+      "description": "Team members and invites with rolling roles, confirmed removal and highlighted search.",
+      "categories": [
+        "settings"
+      ],
+      "files": [
+        {
+          "path": "components/ui/member-list.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "notification-matrix",
+      "type": "registry:ui",
+      "title": "Notification Matrix",
+      "description": "Events by channels, column select-alls that ripple, and chip cards on phones.",
+      "categories": [
+        "settings"
+      ],
+      "files": [
+        {
+          "path": "components/ui/notification-matrix.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "session-list",
+      "type": "registry:ui",
+      "title": "Session List",
+      "description": "Signed-in devices that fold away on sign-out, one or all at once.",
+      "categories": [
+        "settings"
+      ],
+      "files": [
+        {
+          "path": "components/ui/session-list.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "settings-row",
+      "type": "registry:ui",
+      "title": "Settings Row",
+      "description": "Label, description and control per row, each showing its own save as it happens.",
+      "categories": [
+        "settings"
+      ],
+      "files": [
+        {
+          "path": "components/ui/settings-row.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "shortcut-recorder",
+      "type": "registry:ui",
+      "title": "Shortcut Recorder",
+      "description": "Records a key combo live, sinks held keys and asks before stealing one.",
+      "categories": [
+        "settings"
+      ],
+      "files": [
+        {
+          "path": "components/ui/shortcut-recorder.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "theme-picker",
+      "type": "registry:ui",
+      "title": "Theme Picker",
+      "description": "Light, dark and system cards drawn in the real palettes, with a sliding ring.",
+      "categories": [
+        "settings"
+      ],
+      "files": [
+        {
+          "path": "components/ui/theme-picker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "type-to-confirm",
+      "type": "registry:ui",
+      "title": "Type to Confirm",
+      "description": "Type the exact name to unlock a destructive action; the padlock opens on match.",
+      "categories": [
+        "settings"
+      ],
+      "files": [
+        {
+          "path": "components/ui/type-to-confirm.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "code-block",
+      "type": "registry:ui",
+      "title": "Code Block",
+      "description": "Highlighted code with a sticky gutter, wrap that hangs its indent, and folding.",
+      "categories": [
+        "developer"
+      ],
+      "files": [
+        {
+          "path": "components/ui/code-block.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "code-tabs",
+      "type": "registry:ui",
+      "title": "Code Tabs",
+      "description": "Package manager or language tabs that remember the choice across every block.",
+      "categories": [
+        "developer"
+      ],
+      "files": [
+        {
+          "path": "components/ui/code-tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "deploy-status",
+      "type": "registry:ui",
+      "title": "Deploy Status",
+      "description": "Deployment row with a live, rolling duration and status changes that settle in place.",
+      "categories": [
+        "developer"
+      ],
+      "files": [
+        {
+          "path": "components/ui/deploy-status.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "diff-viewer",
+      "type": "registry:ui",
+      "title": "Diff Viewer",
+      "description": "Unified or split diffs with word-level marks and folds that open in steps.",
+      "categories": [
+        "developer"
+      ],
+      "files": [
+        {
+          "path": "components/ui/diff-viewer.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "env-editor",
+      "type": "registry:ui",
+      "title": "Env Editor",
+      "description": "Environment variable rows with masked values, paste-a-.env import and duplicate warnings.",
+      "categories": [
+        "developer"
+      ],
+      "files": [
+        {
+          "path": "components/ui/env-editor.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "install-command",
+      "type": "registry:ui",
+      "title": "Install Command",
+      "description": "A one-line command whose verb swaps per package manager while the package slides.",
+      "categories": [
+        "developer"
+      ],
+      "files": [
+        {
+          "path": "components/ui/install-command.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "json-viewer",
+      "type": "registry:ui",
+      "title": "JSON Viewer",
+      "description": "Folding JSON tree with search that unfolds to every match, and copyable paths.",
+      "categories": [
+        "developer"
+      ],
+      "files": [
+        {
+          "path": "components/ui/json-viewer.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "log-viewer",
+      "type": "registry:ui",
+      "title": "Log Viewer",
+      "description": "Streaming logs that follow the tail, pause when you scroll up, and count what you missed.",
+      "categories": [
+        "developer"
+      ],
+      "files": [
+        {
+          "path": "components/ui/log-viewer.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "terminal",
+      "type": "registry:ui",
+      "title": "Terminal",
+      "description": "A session that types itself with human pacing, in space it already reserved.",
+      "categories": [
+        "developer"
+      ],
+      "files": [
+        {
+          "path": "components/ui/terminal.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "uptime-bars",
+      "type": "registry:ui",
+      "title": "Uptime Bars",
+      "description": "Ninety days of status bars with a gliding per-day tooltip and incident detail.",
+      "categories": [
+        "developer"
+      ],
+      "files": [
+        {
+          "path": "components/ui/uptime-bars.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "announcement-pill",
+      "type": "registry:ui",
+      "title": "Announcement Pill",
+      "description": "Link above a hero where a sheen crosses once and the chevron becomes an arrow.",
+      "categories": [
+        "marketing"
+      ],
+      "files": [
+        {
+          "path": "components/ui/announcement-pill.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "changelog",
+      "type": "registry:ui",
+      "title": "Changelog",
+      "description": "Releases on a timeline rail that lights the one you’re reading.",
+      "categories": [
+        "marketing"
+      ],
+      "files": [
+        {
+          "path": "components/ui/changelog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "comparison-table",
+      "type": "registry:ui",
+      "title": "Comparison Table",
+      "description": "Plans against features with a sticky header, a gliding row highlight and phone view.",
+      "categories": [
+        "marketing"
+      ],
+      "files": [
+        {
+          "path": "components/ui/comparison-table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "feature-tabs",
+      "type": "registry:ui",
+      "title": "Feature Tabs",
+      "description": "Feature tour whose rail fills per tab, freezing on hover, focus or scroll-away.",
+      "categories": [
+        "marketing"
+      ],
+      "files": [
+        {
+          "path": "components/ui/feature-tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "newsletter-form",
+      "type": "registry:ui",
+      "title": "Newsletter Form",
+      "description": "Inline email signup whose button grows over the field into the confirmation.",
+      "categories": [
+        "marketing"
+      ],
+      "files": [
+        {
+          "path": "components/ui/newsletter-form.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stats-band",
+      "type": "registry:ui",
+      "title": "Stats Band",
+      "description": "Headline numbers whose digits spin up once, in turn, when scrolled into view.",
+      "categories": [
+        "marketing"
+      ],
+      "files": [
+        {
+          "path": "components/ui/stats-band.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "testimonial-wall",
+      "type": "registry:ui",
+      "title": "Testimonial Wall",
+      "description": "Masonry of quotes drifting in opposite columns that ease to a stop under the pointer.",
+      "categories": [
+        "marketing"
+      ],
+      "files": [
+        {
+          "path": "components/ui/testimonial-wall.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "waitlist-form",
+      "type": "registry:ui",
+      "title": "Waitlist Form",
+      "description": "Join a waitlist, watch your place roll in, then share a referral link.",
+      "categories": [
+        "marketing"
+      ],
+      "files": [
+        {
+          "path": "components/ui/waitlist-form.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "animate-height",
+      "type": "registry:ui",
+      "title": "Animate Height",
+      "description": "Follows its content’s height on a spring, measured, interruptible, auto at rest.",
+      "categories": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "components/ui/animate-height.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "blur-in",
+      "type": "registry:ui",
+      "title": "Blur In",
+      "description": "Reveals content with a fade, a small rise and a clearing blur, once.",
+      "categories": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "components/ui/blur-in.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "flip-list",
+      "type": "registry:ui",
+      "title": "FLIP List",
+      "description": "Rows glide to their new place on sort and filter; leavers step out first.",
+      "categories": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "components/ui/flip-list.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "icon-swap",
+      "type": "registry:ui",
+      "title": "Icon Swap",
+      "description": "Swaps icons in a fixed box with a blur, turn or roll that knows direction.",
+      "categories": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "components/ui/icon-swap.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "presence-swap",
+      "type": "registry:ui",
+      "title": "Presence Swap",
+      "description": "Swaps views the way you're going, follows their height and keeps focus.",
+      "categories": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "components/ui/presence-swap.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "press-depth",
+      "type": "registry:ui",
+      "title": "Press Depth",
+      "description": "Any surface sinks, drops a pixel and flattens its shadow, then springs back.",
+      "categories": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "components/ui/press-depth.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ripple",
+      "type": "registry:ui",
+      "title": "Ripple",
+      "description": "A press wave from the pointer, in the surface's own text color.",
+      "categories": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "components/ui/ripple.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stagger-in",
+      "type": "registry:ui",
+      "title": "Stagger In",
+      "description": "Rows arrive in one capped wave the first time, never on filters.",
+      "categories": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "components/ui/stagger-in.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    }
+  ]
+}

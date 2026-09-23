@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "cn",
+  "type": "registry:lib",
+  "title": "cn",
+  "description": "Stealth UI shared cn helper.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "lib/cn.ts",
+      "content": "type Value = string | number | false | null | undefined;\n\n/** Joins class names, dropping falsy values. Later classes are appended, so pass overrides last. */\nexport function cn(...values: Value[]) {\n  let out = \"\";\n  for (const v of values) if (v) out += (out ? \" \" : \"\") + v;\n  return out;\n}\n",
+      "type": "registry:lib"
+    }
+  ]
+}

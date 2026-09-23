@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "segmented-control",
+  "type": "registry:ui",
+  "title": "Segmented Control",
+  "description": "One pill that springs between segments, with radio semantics and arrow keys.",
+  "categories": [
+    "selection"
+  ],
+  "dependencies": [
+    "@base-ui/react",
+    "motion"
+  ],
+  "registryDependencies": [
+    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/tokens.json",
+    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/cn.json",
+    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/motion.json",
+    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/use-controllable-state.json"
+  ],
+  "files": [
+    {
+      "path": "components/ui/segmented-control.tsx",
+      "content": "\"use client\";\nimport { Radio } from \"@base-ui/react/radio\";\nimport { RadioGroup } from \"@base-ui/react/radio-group\";\nimport { motion, useReducedMotion } from \"motion/react\";\nimport { createContext, use, useId } from \"react\";\nimport { cn } from \"@/lib/cn\";\nimport { spring } from \"@/lib/motion\";\nimport { useControllableState } from \"@/lib/use-controllable-state\";\n\ntype Size = \"sm\" | \"md\";\ntype Ctx = { value: string; size: Size; pill: string };\nconst SegmentedContext = createContext<Ctx>({ value: \"\", size: \"md\", pill: \"\" });\n\nexport type SegmentedControlProps = Omit<RadioGroup.Props<string>, \"className\" | \"value\" | \"defaultValue\" | \"onValueChange\"> & {\n  value?: string;\n  defaultValue?: string;\n  onValueChange?: (value: string) => void;\n  size?: Size;\n  /** Stretch to the container and give every segment the same width. */\n  fill?: boolean;\n  className?: string;\n};\n\nexport function SegmentedControl({\n  value: valueProp,\n  defaultValue = \"\",\n  onValueChange,\n  size = \"md\",\n  fill = false,\n  className,\n  ...rest\n}: SegmentedControlProps) {\n  const [value, setValue] = useControllableState({ value: valueProp, defaultValue, onChange: onValueChange });\n  // One pill per control, shared by every segment through layoutId.\n  const pill = useId();\n\n  return (\n    <SegmentedContext value={{ value, size, pill }}>\n      <RadioGroup\n        value={value}\n        onValueChange={(next) => setValue(next as string)}\n        data-size={size}\n        className={cn(\n          \"relative rounded-lg border border-line bg-page p-0.5\",\n          fill ? \"grid w-full auto-cols-fr grid-flow-col\" : \"inline-flex max-w-full\",\n          size === \"sm\" ? \"h-7 rounded-md\" : \"h-8\",\n          className,\n        )}\n        {...rest}\n      />\n    </SegmentedContext>\n  );\n}\n\nexport type SegmentedControlItemProps = Omit<Radio.Root.Props<string>, \"className\" | \"children\" | \"render\" | \"nativeButton\"> & {\n  value: string;\n  /** 14px icon before the label. With no children, pass aria-label for an icon-only segment. */\n  icon?: React.ReactNode;\n  children?: React.ReactNode;\n  className?: string;\n};\n\nexport function SegmentedControlItem({ value, icon, children, disabled, className, ...rest }: SegmentedControlItemProps) {\n  const { value: selected, size, pill } = use(SegmentedContext);\n  const reduce = useReducedMotion();\n  const active = selected === value;\n  const iconOnly = children == null;\n\n  return (\n    <Radio.Root\n      value={value}\n      disabled={disabled}\n      nativeButton\n      render={<button type=\"button\" />}\n      // Disabled comes from the primitive so a disabled control dims every segment, not just flagged ones.\n      className={(state) =>\n        cn(\n          \"group/seg relative flex h-full min-w-0 select-none items-center justify-center outline-none\",\n          size === \"sm\" ? \"rounded-[5px] text-[12px]\" : \"rounded-md text-[12.5px]\",\n          iconOnly ? (size === \"sm\" ? \"w-6\" : \"w-7\") : size === \"sm\" ? \"px-2\" : \"px-2.5\",\n          \"focus-visible:outline-solid focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-fg-3\",\n          \"transition-colors duration-150\",\n          active ? \"text-fg\" : \"text-fg-3\",\n          state.disabled ? \"cursor-not-allowed opacity-50\" : !active && !state.readOnly && \"hover:text-fg-2\",\n          state.disabled || state.readOnly ? \"[--press:1]\" : \"[--press:0.96]\",\n          className,\n        )\n      }\n      {...rest}\n    >\n      {active && (\n        <motion.span\n          layoutId={pill}\n          aria-hidden\n          className=\"absolute inset-0 border border-line-2 bg-raised shadow-[var(--shadow)]\"\n          // Radius in style so Motion keeps the corners round while the pill stretches between segments of different widths.\n          style={{ borderRadius: size === \"sm\" ? 5 : 6 }}\n          transition={reduce ? { duration: 0 } : spring.snappy}\n        />\n      )}\n      {/* The content presses; the pill stays put so it never looks like it jumped. */}\n      <span\n        className={cn(\n          \"relative flex min-w-0 items-center font-medium tracking-[-0.005em] transition-[scale] duration-100 ease-out motion-safe:group-active/seg:scale-(--press)\",\n          size === \"sm\" ? \"gap-1\" : \"gap-1.5\",\n          \"[&_svg]:size-3.5 [&_svg]:shrink-0\",\n        )}\n      >\n        {icon}\n        {children != null && <span className=\"truncate\">{children}</span>}\n      </span>\n    </Radio.Root>\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "docs": "https://stealth.pm/ui/segmented-control"
+}

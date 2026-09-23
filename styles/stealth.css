@@ -1,0 +1,133 @@
+/* Stealth UI tokens. Import once, after Tailwind:
+ *   @import "tailwindcss";
+ *   @import "./stealth.css";
+ * Dark by default; set data-theme="light" on <html> for light. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root,
+[data-theme="dark"] {
+  --page: #080808;
+  --frame: #0d0d0d;
+  --raised: #141414;
+  --hover: #161616;
+  --line: #1c1c1c;
+  --line-2: #262626;
+  --fg: #ededed;
+  --fg-2: #9b9b9b;
+  --fg-3: #6b6b6b;
+  --fg-4: #454545;
+  --shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 12px 40px -12px rgba(0, 0, 0, 0.9);
+  --overlay: rgba(0, 0, 0, 0.6);
+  --danger: #e5646a;
+  --danger-soft: rgba(229, 100, 106, 0.12);
+  --success: #5fc992;
+  --success-soft: rgba(95, 201, 146, 0.12);
+  --warning: #e0a85a;
+  --warning-soft: rgba(224, 168, 90, 0.12);
+  --info: #7aa7e8;
+  --info-soft: rgba(122, 167, 232, 0.12);
+  --pop: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 0 0 1px rgba(0, 0, 0, 0.4), 0 16px 48px -16px rgba(0, 0, 0, 0.95);
+  color-scheme: dark;
+}
+[data-theme="light"] {
+  --page: #f2f2f0;
+  --frame: #fbfbfa;
+  --raised: #ffffff;
+  --hover: #f1f1ef;
+  --line: #ebebe8;
+  --line-2: #dcdcd8;
+  --fg: #151515;
+  --fg-2: #5f5f5c;
+  --fg-3: #8d8d89;
+  --fg-4: #b8b8b3;
+  --shadow: 0 1px 0 rgba(255, 255, 255, 0.9) inset, 0 12px 32px -14px rgba(0, 0, 0, 0.18);
+  --overlay: rgba(20, 20, 18, 0.28);
+  --danger: #d23f45;
+  --danger-soft: rgba(210, 63, 69, 0.09);
+  --success: #1f9a5c;
+  --success-soft: rgba(31, 154, 92, 0.09);
+  --warning: #b87514;
+  --warning-soft: rgba(184, 117, 20, 0.1);
+  --info: #2f6fce;
+  --info-soft: rgba(47, 111, 206, 0.09);
+  --pop: 0 1px 0 rgba(255, 255, 255, 0.9) inset, 0 0 0 1px rgba(0, 0, 0, 0.04), 0 16px 40px -14px rgba(0, 0, 0, 0.22);
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-page: var(--page);
+  --color-frame: var(--frame);
+  --color-raised: var(--raised);
+  --color-hover: var(--hover);
+  --color-line: var(--line);
+  --color-line-2: var(--line-2);
+  --color-fg: var(--fg);
+  --color-fg-2: var(--fg-2);
+  --color-fg-3: var(--fg-3);
+  --color-fg-4: var(--fg-4);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-pixel: var(--font-geist-pixel-square), var(--font-geist-mono), monospace;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+  --text-2xs: 10.5px;
+  --text-2xs--line-height: 14px;
+  --color-overlay: var(--overlay);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-info: var(--info);
+  --color-info-soft: var(--info-soft);
+  --shadow-soft: var(--shadow);
+  --shadow-pop: var(--pop);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --animate-spin-slow: spin 1.2s linear infinite;
+  --animate-shimmer: shimmer 2.4s linear infinite;
+  --animate-pulse-soft: pulse-soft 2.5s ease-in-out infinite;
+  --animate-caret: caret 1.06s steps(1, end) infinite;
+  --animate-marquee: marquee var(--marquee-duration, 30s) linear infinite;
+  --animate-marquee-y: marquee-y var(--marquee-duration, 30s) linear infinite;
+  --animate-indeterminate: indeterminate 1.4s var(--ease-in-out-quart) infinite;
+  --animate-ping-soft: ping-soft 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+  --animate-dot-wave: dot-wave 1.2s ease-in-out infinite;
+  --animate-shine: shine 2s linear infinite;
+
+  @keyframes shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+  @keyframes pulse-soft { 0%, 100% { opacity: 1; } 50% { opacity: 0.55; } }
+  @keyframes caret { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(calc(-100% - var(--marquee-gap, 0px))); } }
+  @keyframes marquee-y { from { transform: translateY(0); } to { transform: translateY(calc(-100% - var(--marquee-gap, 0px))); } }
+  @keyframes indeterminate { 0% { transform: translateX(-100%) scaleX(0.4); } 50% { transform: translateX(30%) scaleX(0.6); } 100% { transform: translateX(100%) scaleX(0.4); } }
+  @keyframes ping-soft { 0% { transform: scale(1); opacity: 0.55; } 80%, 100% { transform: scale(2.4); opacity: 0; } }
+  @keyframes dot-wave { 0%, 60%, 100% { transform: translateY(0); opacity: 0.45; } 30% { transform: translateY(-3px); opacity: 1; } }
+  @keyframes shine { from { background-position: 150% 0; } to { background-position: -50% 0; } }
+}
+
+html {
+  background: var(--page);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "ss01", "cv11";
+  transition: background-color 0.4s var(--ease-out-expo);
+}
+body {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.45;
+  letter-spacing: -0.003em;
+}
+::selection { background: var(--fg); color: var(--frame); }
+/* Layering scale. Anything above 50 is a bug. */
+:root { --z-sticky: 10; --z-dropdown: 20; --z-overlay: 30; --z-dialog: 31; --z-popover: 40; --z-toast: 45; --z-tooltip: 50; }
+
+@layer base { :focus-visible { outline: 1px solid var(--fg-2); outline-offset: 2px; border-radius: 4px; } }
+.tabular { font-variant-numeric: tabular-nums; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}

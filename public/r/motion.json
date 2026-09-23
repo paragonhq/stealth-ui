@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "motion",
+  "type": "registry:lib",
+  "title": "motion",
+  "description": "Stealth UI shared motion helper.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "lib/motion.ts",
+      "content": "// Motion tokens for Stealth UI. Components import these instead of writing\n// numbers inline, so the whole library shares one feel. The CSS side lives in\n// globals.css as --ease-out-expo, --ease-in-out-quart and --ease-drawer.\n\nexport const ease = {\n  /** Entrances. Strong deceleration: the first 50ms carry the motion. */\n  out: [0.16, 1, 0.3, 1] as const,\n  /** Softer entrance for larger surfaces. */\n  outQuart: [0.25, 1, 0.5, 1] as const,\n  /** Things moving while on screen: indicators, reorders, resizes. */\n  inOut: [0.76, 0, 0.24, 1] as const,\n  /** Exits only. */\n  in: [0.4, 0, 1, 1] as const,\n  /** iOS-style sheets and drawers. */\n  drawer: [0.32, 0.72, 0, 1] as const,\n};\n\nexport const spring = {\n  /** Indicators, chips, thumbs, small moves. */\n  snappy: { type: \"spring\", stiffness: 520, damping: 38, mass: 0.7 },\n  /** Cards, panels, list reorder. */\n  soft: { type: \"spring\", stiffness: 260, damping: 28, mass: 0.9 },\n  /** Highlights that glide after the pointer. */\n  follow: { type: \"spring\", stiffness: 650, damping: 45, mass: 0.5 },\n  /** Icon and label swaps that pop into place. */\n  pop: { type: \"spring\", stiffness: 600, damping: 30, mass: 0.6 },\n  /** Sheets settling after a release. */\n  sheet: { type: \"spring\", stiffness: 300, damping: 32, mass: 1 },\n  /** Rare: a single pixel of overshoot for delight moments. */\n  bouncy: { type: \"spring\", stiffness: 420, damping: 20, mass: 0.7 },\n} as const;\n\n/** Seconds. Exits run at roughly 70% of the entrance. */\nexport const dur = {\n  press: 0.12,\n  hover: 0.16,\n  tooltip: 0.16,\n  menu: 0.18,\n  indicator: 0.22,\n  dialog: 0.26,\n  toast: 0.28,\n  page: 0.38,\n  reveal: 0.8,\n} as const;\n\nexport const stagger = { tight: 0.012, items: 0.02, words: 0.03, lines: 0.08 } as const;\n\n/** The standard \"nothing appears from nothing\" entrance for small popups. */\nexport const pop = {\n  initial: { opacity: 0, scale: 0.96, filter: \"blur(2px)\" },\n  animate: { opacity: 1, scale: 1, filter: \"blur(0px)\" },\n  exit: { opacity: 0, scale: 0.97, filter: \"blur(1px)\", transition: { duration: 0.1 } },\n} as const;\n\n/** Content swap inside a fixed box: icons, labels, digits. */\nexport const swap = {\n  initial: { opacity: 0, scale: 0.6, filter: \"blur(3px)\" },\n  animate: { opacity: 1, scale: 1, filter: \"blur(0px)\" },\n  exit: { opacity: 0, scale: 0.6, filter: \"blur(3px)\" },\n} as const;\n",
+      "type": "registry:lib"
+    }
+  ]
+}

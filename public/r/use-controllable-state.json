@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "use-controllable-state",
+  "type": "registry:lib",
+  "title": "use-controllable-state",
+  "description": "Stealth UI shared use-controllable-state helper.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "lib/use-controllable-state.ts",
+      "content": "\"use client\";\nimport { useCallback, useState } from \"react\";\n\n/**\n * One state that is either controlled (`value` + `onChange`) or uncontrolled\n * (`defaultValue`). Never half of one: when `value` is defined, the prop wins.\n */\nexport function useControllableState<T>({\n  value,\n  defaultValue,\n  onChange,\n}: {\n  value?: T;\n  defaultValue: T;\n  onChange?: (next: T) => void;\n}) {\n  const [inner, setInner] = useState(defaultValue);\n  const controlled = value !== undefined;\n  const current = controlled ? value : inner;\n\n  const set = useCallback(\n    (next: T | ((prev: T) => T)) => {\n      const resolved = typeof next === \"function\" ? (next as (prev: T) => T)(current) : next;\n      if (Object.is(resolved, current)) return;\n      if (!controlled) setInner(resolved);\n      onChange?.(resolved);\n    },\n    [controlled, current, onChange],\n  );\n\n  return [current, set] as const;\n}\n",
+      "type": "registry:lib"
+    }
+  ]
+}

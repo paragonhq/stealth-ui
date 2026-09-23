@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "icon-swap",
+  "type": "registry:ui",
+  "title": "Icon Swap",
+  "description": "Swaps icons in a fixed box with a blur, turn or roll that knows direction.",
+  "categories": [
+    "motion"
+  ],
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [
+    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/tokens.json",
+    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/cn.json",
+    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/motion.json"
+  ],
+  "files": [
+    {
+      "path": "components/ui/icon-swap.tsx",
+      "content": "\"use client\";\nimport { AnimatePresence, motion, useReducedMotion, type Variants } from \"motion/react\";\nimport { useState } from \"react\";\nimport { cn } from \"@/lib/cn\";\nimport { spring, swap } from \"@/lib/motion\";\n\ntype Direction = 1 | -1;\n\nexport type IconSwapProps<K extends string> = Omit<React.ComponentProps<\"span\">, \"children\"> & {\n  /** Which icon is showing. Changing it swaps. */\n  value: K;\n  /** Every icon it can show, by key. Their order sets which way \"forward\" turns or rolls. */\n  icons: Record<K, React.ReactNode>;\n  /**\n   * blur: scale and blur through each other, for state changes (play, pause, copied).\n   * rotate: turn a quarter as they swap, for toggles and cycles (menu, theme).\n   * slide: roll through the box like a counter, for ordered values (sort direction).\n   */\n  variant?: \"blur\" | \"rotate\" | \"slide\";\n  /** The box, in px. Nothing around it moves while icons swap, whatever their size. */\n  size?: number;\n  /** Force the turn or roll direction. Otherwise it follows the order of `icons`. */\n  direction?: Direction;\n  /** Give the icon a name (role=\"img\") when it isn't inside a labelled control. */\n  label?: string;\n};\n\n// Which way is forward: the shorter way round the list, so a three-state cycle\n// that wraps from last to first keeps turning the same way.\nfunction directionOf(keys: string[], from: string, to: string): Direction {\n  const a = keys.indexOf(from);\n  const b = keys.indexOf(to);\n  if (a < 0 || b < 0) return 1;\n  if (keys.length < 3) return b > a ? 1 : -1;\n  const ahead = (b - a + keys.length) % keys.length;\n  return ahead <= keys.length / 2 ? 1 : -1;\n}\n\nconst variants: Record<\"blur\" | \"rotate\" | \"slide\", Variants> = {\n  blur: { enter: swap.initial, center: swap.animate, exit: swap.exit },\n  rotate: {\n    enter: (d: Direction) => ({ opacity: 0, scale: 0.6, rotate: -90 * d, filter: \"blur(2px)\" }),\n    center: { opacity: 1, scale: 1, rotate: 0, filter: \"blur(0px)\" },\n    exit: (d: Direction) => ({ opacity: 0, scale: 0.6, rotate: 90 * d, filter: \"blur(2px)\" }),\n  },\n  slide: {\n    enter: (d: Direction) => ({ opacity: 0, y: `${75 * d}%`, filter: \"blur(1.5px)\" }),\n    center: { opacity: 1, y: \"0%\", filter: \"blur(0px)\" },\n    exit: (d: Direction) => ({ opacity: 0, y: `${-75 * d}%`, filter: \"blur(1.5px)\" }),\n  },\n};\n\n// Reduced motion keeps only the crossfade. The resting state stays identical to the\n// full variant, so server and client render the same styles whatever the setting.\nconst faded = (v: Variants): Variants => ({ enter: { ...v.center, opacity: 0 }, center: v.center, exit: { ...v.center, opacity: 0 } });\nconst reduced = { blur: faded(variants.blur), rotate: faded(variants.rotate), slide: faded(variants.slide) };\n\nexport function IconSwap<K extends string>({\n  value,\n  icons,\n  variant = \"blur\",\n  size = 16,\n  direction,\n  label,\n  className,\n  style,\n  ...rest\n}: IconSwapProps<K>) {\n  const reduce = useReducedMotion();\n  // Remember the last value so the next swap knows which way it's going.\n  const [shown, setShown] = useState({ value, dir: 1 as Direction });\n  if (shown.value !== value) {\n    setShown({ value, dir: direction ?? directionOf(Object.keys(icons), shown.value, value) });\n  }\n\n  return (\n    <span\n      data-variant={variant}\n      role={label ? \"img\" : undefined}\n      aria-label={label}\n      aria-hidden={label ? undefined : true}\n      className={cn(\n        \"relative inline-grid shrink-0 place-items-center align-middle\",\n        // A roll reads as a counter only if it's clipped to the box.\n        variant === \"slide\" && \"overflow-hidden\",\n        className,\n      )}\n      style={{ width: size, height: size, ...style }}\n      {...rest}\n    >\n      <AnimatePresence initial={false} custom={shown.dir}>\n        <motion.span\n          key={value}\n          custom={shown.dir}\n          variants={(reduce ? reduced : variants)[variant]}\n          initial=\"enter\"\n          animate=\"center\"\n          exit=\"exit\"\n          transition={reduce ? { duration: 0.12 } : variant === \"slide\" ? spring.snappy : spring.pop}\n          className=\"pointer-events-none absolute inset-0 grid place-items-center [&>svg]:shrink-0\"\n        >\n          {icons[value]}\n        </motion.span>\n      </AnimatePresence>\n    </span>\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "docs": "https://stealth.pm/ui/icon-swap"
+}

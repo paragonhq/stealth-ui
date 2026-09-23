@@ -1,0 +1,33 @@
+{
+  "name": "stealth-ui",
+  "version": "0.1.0",
+  "private": true,
+  "description": "321 finished React components for product interfaces, with motion, states and accessibility done.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "next": "16.3.5",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "geist": "^1.7.2",
+    "@base-ui/react": "^1.8.0",
+    "@floating-ui/react": "^0.27.20",
+    "@number-flow/react": "^0.6.2",
+    "motion": "^13.4.0",
+    "sugar-high": "^2.4.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.5",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

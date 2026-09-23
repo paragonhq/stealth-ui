@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group",
+  "type": "registry:ui",
+  "title": "Radio Group",
+  "description": "One choice from a few, with a dot that springs in and arrow-key roving.",
+  "categories": [
+    "selection"
+  ],
+  "dependencies": [
+    "@base-ui/react",
+    "motion"
+  ],
+  "registryDependencies": [
+    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/tokens.json",
+    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/cn.json",
+    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/motion.json"
+  ],
+  "files": [
+    {
+      "path": "components/ui/radio-group.tsx",
+      "content": "\"use client\";\nimport { Radio } from \"@base-ui/react/radio\";\nimport { RadioGroup as BaseRadioGroup } from \"@base-ui/react/radio-group\";\nimport { motion, useReducedMotion } from \"motion/react\";\nimport { createContext, use, useId } from \"react\";\nimport { cn } from \"@/lib/cn\";\nimport { ease, spring } from \"@/lib/motion\";\n\ntype Size = \"sm\" | \"md\";\nconst GroupContext = createContext<{ size: Size; invalid: boolean }>({ size: \"md\", invalid: false });\n\nexport type RadioGroupProps = Omit<BaseRadioGroup.Props<string>, \"className\"> & {\n  orientation?: \"vertical\" | \"horizontal\";\n  size?: Size;\n  /** Marks every unselected option invalid, e.g. a required choice left empty after submit. */\n  invalid?: boolean;\n  className?: string;\n};\n\nexport function RadioGroup({ orientation = \"vertical\", size = \"md\", invalid = false, className, ...rest }: RadioGroupProps) {\n  return (\n    <GroupContext value={{ size, invalid }}>\n      <BaseRadioGroup\n        data-orientation={orientation}\n        aria-invalid={invalid || undefined}\n        className={cn(\n          \"flex\",\n          orientation === \"vertical\" ? \"flex-col gap-3\" : \"flex-row flex-wrap gap-x-5 gap-y-2.5\",\n          className,\n        )}\n        {...rest}\n      />\n    </GroupContext>\n  );\n}\n\nexport type RadioGroupItemProps = Omit<Radio.Root.Props<string>, \"className\" | \"children\"> & {\n  label: React.ReactNode;\n  description?: React.ReactNode;\n  className?: string;\n};\n\nexport function RadioGroupItem({ label, description, className, \"aria-describedby\": describedBy, ...rest }: RadioGroupItemProps) {\n  const { size, invalid } = use(GroupContext);\n  const descriptionId = useId();\n\n  return (\n    <label\n      className={cn(\n        \"group/radio relative flex select-none items-start\",\n        size === \"sm\" ? \"gap-2\" : \"gap-2.5\",\n        \"has-[[data-disabled]]:opacity-50\",\n        className,\n      )}\n    >\n      <span className={cn(\"flex items-center\", size === \"sm\" ? \"h-[18px]\" : \"h-5\")}>\n        <Radio.Root\n          aria-describedby={cn(describedBy, description != null && descriptionId) || undefined}\n          className={(state) => {\n            const idle = !state.disabled && !state.readOnly;\n            return cn(\n              \"relative grid shrink-0 place-items-center rounded-full border outline-none\",\n              \"focus-visible:outline-solid focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-fg-3\",\n              \"transition-[background-color,border-color,scale] duration-150 ease-out-expo motion-reduce:transition-none\",\n              size === \"sm\" ? \"size-3.5\" : \"size-4\",\n              idle && \"motion-safe:group-active/radio:scale-[0.86] group-active/radio:duration-100\",\n              state.checked\n                ? \"border-fg bg-fg\"\n                : invalid || state.valid === false\n                  ? \"border-danger bg-danger-soft\"\n                  : cn(\"border-fg-4 bg-raised\", idle && \"group-hover/radio:border-fg-3\"),\n            );\n          }}\n          {...rest}\n        >\n          <Radio.Indicator\n            keepMounted\n            className=\"pointer-events-none grid place-items-center\"\n            render={(props, state) => (\n              <span {...props}>\n                <Dot checked={state.checked} size={size} />\n              </span>\n            )}\n          />\n        </Radio.Root>\n      </span>\n      <span className=\"flex min-w-0 flex-col gap-px\">\n        <span className={cn(\"text-fg\", size === \"sm\" ? \"text-[12.5px] leading-[18px]\" : \"text-[13px] leading-5\")}>{label}</span>\n        {description != null && (\n          <span id={descriptionId} className={cn(\"text-fg-3\", size === \"sm\" ? \"text-[12px] leading-4\" : \"text-[12.5px] leading-[18px]\")}>\n            {description}\n          </span>\n        )}\n      </span>\n    </label>\n  );\n}\n\n/** The center dot springs in as the ring fills behind it. */\nfunction Dot({ checked, size }: { checked: boolean; size: Size }) {\n  const reduce = useReducedMotion();\n  return (\n    <motion.span\n      className={cn(\"block rounded-full bg-frame\", size === \"sm\" ? \"size-[5px]\" : \"size-1.5\")}\n      initial={false}\n      animate={checked ? { scale: 1, opacity: 1 } : { scale: 0.2, opacity: 0 }}\n      transition={\n        reduce\n          ? { opacity: { duration: 0.12 }, scale: { duration: 0 } }\n          : checked\n            ? { ...spring.pop, opacity: { duration: 0.08 } }\n            : { duration: 0.1, ease: ease.in }\n      }\n    />\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "docs": "https://stealth.pm/ui/radio-group"
+}

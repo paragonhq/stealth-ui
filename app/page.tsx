@@ -38,7 +38,7 @@ export default function Home() {
         );
       })}
       <footer className="mt-10 border-t border-line px-5 py-5 text-[11.5px] text-fg-4 md:px-7">
-        Made by Paragon · <a href="https://stealth.pm/ui" className="transition-colors hover:text-fg-2">stealth.pm/ui</a>
+        Made by Paragon · <a href="https://www.stealth.pm/ui" className="transition-colors hover:text-fg-2">stealth.pm/ui</a>
       </footer>
     </Shell>
   );

@@ -8,7 +8,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
         <Link href="/" className="text-[13px] font-medium tracking-[-0.01em] text-fg">Stealth UI</Link>
         <span className="font-mono text-[10.5px] text-fg-4">starter</span>
         <nav className="ml-auto flex items-center gap-1">
-          <a href="https://stealth.pm/ui" className="rounded-md px-2 py-1 text-[12px] text-fg-3 transition-colors hover:text-fg">Docs</a>
+          <a href="https://www.stealth.pm/ui" className="rounded-md px-2 py-1 text-[12px] text-fg-3 transition-colors hover:text-fg">Docs</a>
           <a href="https://github.com/paragonhq/stealth-ui" className="rounded-md px-2 py-1 text-[12px] text-fg-3 transition-colors hover:text-fg">GitHub</a>
           <ThemeToggle />
         </nav>

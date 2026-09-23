@@ -1,6 +1,6 @@
 # Contributing
 
-Stealth UI is written in the [stealth.pm](https://stealth.pm) source and exported to this repo, so the files here are generated. Pull requests are welcome and are carried over by hand.
+Stealth UI is written in the [stealth.pm](https://www.stealth.pm) source and exported to this repo, so the files here are generated. Pull requests are welcome and are carried over by hand.
 
 A change is ready when the component:
 

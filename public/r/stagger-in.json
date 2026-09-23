@@ -9,7 +9,7 @@
   ],
   "dependencies": [],
   "registryDependencies": [
-    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/tokens.json"
+    "https://www.stealth.pm/r/tokens.json"
   ],
   "files": [
     {
@@ -18,5 +18,5 @@
       "type": "registry:ui"
     }
   ],
-  "docs": "https://stealth.pm/ui/stagger-in"
+  "docs": "https://www.stealth.pm/ui/stagger-in"
 }

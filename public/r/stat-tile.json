@@ -12,13 +12,13 @@
     "motion"
   ],
   "registryDependencies": [
-    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/tokens.json",
-    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/cn.json",
-    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/icons.json",
-    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/motion.json",
-    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/use-controllable-state.json",
-    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/delta-badge.json",
-    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/number-ticker.json"
+    "https://www.stealth.pm/r/tokens.json",
+    "https://www.stealth.pm/r/cn.json",
+    "https://www.stealth.pm/r/icons.json",
+    "https://www.stealth.pm/r/motion.json",
+    "https://www.stealth.pm/r/use-controllable-state.json",
+    "https://www.stealth.pm/r/delta-badge.json",
+    "https://www.stealth.pm/r/number-ticker.json"
   ],
   "files": [
     {
@@ -27,5 +27,5 @@
       "type": "registry:ui"
     }
   ],
-  "docs": "https://stealth.pm/ui/stat-tile"
+  "docs": "https://www.stealth.pm/ui/stat-tile"
 }

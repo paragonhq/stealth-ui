@@ -17,6 +17,6 @@
     "hooks": "@/hooks"
   },
   "registries": {
-    "@stealth": "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/{name}.json"
+    "@stealth": "https://www.stealth.pm/r/{name}.json"
   }
 }

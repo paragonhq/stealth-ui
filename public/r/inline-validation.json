@@ -11,11 +11,11 @@
     "motion"
   ],
   "registryDependencies": [
-    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/tokens.json",
-    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/cn.json",
-    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/motion.json",
-    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/use-controllable-state.json",
-    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/field.json"
+    "https://www.stealth.pm/r/tokens.json",
+    "https://www.stealth.pm/r/cn.json",
+    "https://www.stealth.pm/r/motion.json",
+    "https://www.stealth.pm/r/use-controllable-state.json",
+    "https://www.stealth.pm/r/field.json"
   ],
   "files": [
     {
@@ -24,5 +24,5 @@
       "type": "registry:ui"
     }
   ],
-  "docs": "https://stealth.pm/ui/inline-validation"
+  "docs": "https://www.stealth.pm/ui/inline-validation"
 }

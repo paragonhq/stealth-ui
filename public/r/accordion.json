@@ -11,8 +11,8 @@
     "@base-ui/react"
   ],
   "registryDependencies": [
-    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/tokens.json",
-    "https://raw.githubusercontent.com/paragonhq/stealth-ui/main/public/r/cn.json"
+    "https://www.stealth.pm/r/tokens.json",
+    "https://www.stealth.pm/r/cn.json"
   ],
   "files": [
     {
@@ -21,5 +21,5 @@
       "type": "registry:ui"
     }
   ],
-  "docs": "https://stealth.pm/ui/accordion"
+  "docs": "https://www.stealth.pm/ui/accordion"
 }
